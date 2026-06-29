@@ -1,0 +1,62 @@
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm}
+
+% --- การตั้งค่าภาษาไทยและฟอนต์ ---
+\usepackage{fontspec}
+\setmainfont{TH Sarabun New} % สำหรับโปรแกรมในเครื่องคอมพิวเตอร์ที่มีฟอนต์นี้
+% หากใช้ Overleaf แนะนำให้ดาวน์โหลดฟอนต์ TH Sarabun New มาใส่ในโปรเจกต์ หรือเปลี่ยนเป็น \setmainfont{Sarabun}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tabularx}
+
+% เพิ่มระยะห่างระหว่างบรรทัดเล็กน้อย เพื่อไม่ให้สระและวรรณยุกต์ภาษาไทยซ้อนทับกัน
+\linespread{1.25}
+
+% --- การตั้งค่าหัวกระดาษ (Header) แสดงเลขหน้า "หน้า X/Y" ---
+\pagestyle{fancy}
+\fancyhf{} % ล้างค่าเริ่มต้นทั้งหมด
+\fancyhead[R]{\fontsize{12pt}{12pt}\selectfont หน้า \thepage} % จัดให้ชิดขวาตามข้อสอบจริง
+\renewcommand{\headrulewidth}{0pt} % เอาเส้นคั่นแนวนอนออก
+\renewcommand{\footrulewidth}{0pt}
+
+% --- ตัวนับเลขข้อแบบรันต่อเนื่อง (Continuous Question Counter) ---
+\newcounter{qnum}
+\newcommand{\question}{\refstepcounter{qnum}\par\medskip\noindent\textbf{\theqnum. }}
+
+% --- คำสั่งสำหรับสร้างหัวข้อแต่ละตอน ---
+\newcommand{\examsection}[1]{%
+  \vspace{0.6cm}
+  \noindent\textbf{\large #1}
+  \vspace{0.3cm}\par
+}
+
+% --- ระบบจัดรูปแบบช้อยส์ (ก. ข. ค. ง.) ---
+% 1. ช้อยส์แบบแนวนอนเรียงแถวเดียว (เหมาะสำหรับตัวเลขสั้นๆ)
+\newcommand{\choiceshorizontal}[4]{%
+  \nopagebreak
+  \noindent\makebox[0.22\textwidth][l]{ก. #1}%
+  \makebox[0.22\textwidth][l]{ข. #2}%
+  \makebox[0.22\textwidth][l]{ค. #3}%
+  \makebox[0.22\textwidth][l]{ง. #4}\par\medskip
+}
+
+% 2. ช้อยส์แบบตาราง 2x2 (เรียง ก. ข. อยู่บน ค. ง. อยู่ล่าง เหมาะสำหรับข้อความสั้น-ปานกลาง)
+\newcommand{\choicesgrid}[4]{%
+  \nopagebreak
+  \noindent\begin{tabular}{@{}p{0.45\textwidth}p{0.45\textwidth}}
+    ก. #1 & ข. #2 \\
+    ค. #3 & ง. #4
+  \end{tabular}\par\medskip
+}
+
+% 3. ช้อยส์แบบเรียงดิ่งลงมาแถวละข้อ (เหมาะสำหรับช้อยส์ที่เป็นประโยคยาวๆ)
+\newcommand{\choicesvertical}[4]{%
+  \nopagebreak
+  \noindent\hspace*{1em} ก. #1 \\
+  \noindent\hspace*{1em} ข. #2 \\
+  \noindent\hspace*{1em} ค. #3 \\
+  \noindent\hspace*{1em} ง. #4 \par\medskip
+}

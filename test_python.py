@@ -1,0 +1,14 @@
+s = "mississippi"
+max = 0
+i = 0
+while i < len(s):
+    j = i + 1
+    count = 1
+    while j < len(s):
+        if s[i] == s[j]:
+            count = count + 1
+        j = j + 1
+    if count > max:
+        max = count
+    i = i + 1
+print(max)

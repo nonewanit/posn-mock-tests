@@ -1,0 +1,19 @@
+% topic: programming
+\question ร้านสะดวกซื้อ 67-11 มีโปรโมชันมอบส่วนลดให้แก่ลูกค้าตามยอดซื้อและสถานะสมาชิก โดยมีเงื่อนไขตามโปรแกรมด้านล่าง \newline
+จงหาว่าข้อมูลนำเข้า amount และ member ในข้อใดจะทำให้ได้รับส่วนลด 10\%
+\begin{verbatim}
+if amount >= 1000:
+    if member:
+        print("You got 20% discount!")
+    else:
+        print("You got 15% discount!")
+elif amount >= 500:
+    if member:
+        print("You got 10% discount!")
+    else:
+        print("You got 5% discount!")
+else:
+    print("You didn't get discount!")
+\end{verbatim}
+\choicesgrid{amount = 1200, member = True}{amount = 300, member = False}{amount = 500, member = True}{amount = 800, member = False}
+% answer: 3 

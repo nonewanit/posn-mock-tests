@@ -1,0 +1,67 @@
+% topic: programming
+\question ให้โปรแกรม A, B, C และ D ต่อไปนี้ โปรแกรมใดบ้างที่คำนวณและแสดงผลค่าของ $\binom{10}{5}$ ได้ถูกต้อง
+
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม A}
+\begin{verbatim}
+n = 10
+k = 5
+c = 1
+i = 1
+while i <= k:
+    c = c * (n - i + 1) // i
+    i = i + 1
+print(c)
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม B}
+\begin{verbatim}
+n = 10
+k = 5
+c = 1
+i = 0
+while i < k:
+    c = c * (n - i) // (i + 1)
+    i = i + 1
+print(c)
+\end{verbatim}
+\end{minipage}
+
+\vspace{6pt}
+
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม C}
+\begin{verbatim}
+n = 10
+k = 5
+c = 1
+i = 0
+while i < k:
+    c = c * (n - i)
+    i = i + 1
+print(c)
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม D}
+\begin{verbatim}
+n = 10
+k = 5
+c = 1
+i = 0
+while i < k:
+    c = c * (n - i)
+    i = i + 1
+c = c // k
+print(c)
+\end{verbatim}
+\end{minipage}
+\end{center}
+
+\choicesgrid{โปรแกรม A และ B}{โปรแกรม A และ C}{โปรแกรม B และ D}{โปรแกรม C และ D}
+
+% answer: 1
