@@ -32,18 +32,23 @@ OUTPUT_FILE = Path("main.tex")
 
 # Section configuration per ton (in order they appear in the exam)
 # {count}, {start}, {end} are filled in automatically from the actual file counts.
+# Set "shuffle": False to keep original file order (e.g. when difficulty increases per question).
 TON_SECTIONS = [
     {
         "ton": "ton1",
         "header": "ตอนที่ 1 คณิตศาสตร์ จำนวน {count} ข้อ (ข้อ {start}--{end}) ข้อละ 1 คะแนน",
+        "shuffle": True,
     },
     {
         "ton": "ton2",
         "header": "ตอนที่ 2 วิทยาการคำนวณ จำนวน {count} ข้อ (ข้อ {start}--{end}) ข้อละ 1 คะแนน",
+        "shuffle": False,   # difficulty increases respectively — keep order
+        "topic_order": {"programming": 0, "algorithms": 1},
     },
     {
         "ton": "ton3",
         "header": "ตอนที่ 3 วิทยาการคำนวณ แบบอัตนัย (เติมคำตอบ) จำนวน {count} ข้อ (ข้อ {start}--{end}) ข้อละ 2 คะแนน",
+        "shuffle": True,
     },
 ]
 
@@ -105,9 +110,18 @@ def generate_main_tex(problems, output_file, seed):
         if ton not in problems or not problems[ton]:
             continue
 
-        # Collect all file paths for this ton and shuffle
+        # Collect all file paths for this ton
         file_paths = [fp for _, fp in problems[ton]]
-        rng.shuffle(file_paths)
+        # Shuffle if enabled for this ton, otherwise keep numeric order
+        if section.get("shuffle", True):
+            rng.shuffle(file_paths)
+        else:
+            # Sort by (topic_order, stem): programming first, then algorithms
+            topic_order = section.get("topic_order", {})
+            file_paths.sort(key=lambda p: (
+                topic_order.get(p.parent.name, 99),
+                int(p.stem) if p.stem.isdigit() else p.stem
+            ))
 
         count = len(file_paths)
         question_end = question_start + count - 1
@@ -124,10 +138,12 @@ def generate_main_tex(problems, output_file, seed):
         lines.append(f"\\examsection{{{header}}}")
         lines.append("")
 
-        # Input each shuffled problem
+        # Input each problem (wrapped in samepage to prevent mid-question page breaks)
         for fp in file_paths:
             rel_path = str(fp).replace("\\", "/")
+            lines.append("\\begin{samepage}")
             lines.append(f"\\input{{{rel_path}}}")
+            lines.append("\\end{samepage}")
             lines.append("")
 
         lines.append("\\pagebreak")

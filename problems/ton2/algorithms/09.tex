@@ -1,5 +1,18 @@
 % topic: algorithms
-\question 
+\question ข้อใดคือค่าของผลลัพธ์ $A$ ที่ได้จากขั้นตอนวิธีซึ่งแสดงด้วยรหัสเทียมต่อไปนี้ เมื่อกำหนดให้ข้อมูลนำเข้าเริ่มต้นคือ $A = 54$ และ $B = 24$
 \newline
-\choiceshorizontal{}{}{}{}
-% answer: 
+\begin{pseudocode}
+1) รับข้อมูล $A$ และ $B$ เป็นจำนวนเต็มบวก
+\newline
+2) ทำซ้ำตราบใดที่ $B \neq 0$ ให้ทำตามขั้นตอนย่อยดังนี้
+\newline
+.\quad 2.1) คำนวณหาเศษจากการหาร: $Temp = A \pmod B$
+\newline
+.\quad 2.2) เปลี่ยนค่า: $A = B$
+\newline
+.\quad 2.3) เปลี่ยนค่า: $B = Temp$
+\newline
+3) แสดงผลลัพธ์ค่า $A$
+\end{pseudocode}
+\choiceshorizontal{2}{4}{6}{12}
+% answer: 3

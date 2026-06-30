@@ -1,10 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.6.25)  29 JUN 2026 20:57
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.6.25)  30 JUN 2026 17:29
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/nonew/Desktop/Teaching/POSN 1 Qualification 2026/main.tex"
-(c:/Users/nonew/Desktop/Teaching/POSN 1 Qualification 2026/main.tex
+**./main.tex
+(main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\nonew\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -269,7 +268,17 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \TX@cols=\count287
 \TX@ftn=\toks26
 )
-\c@qnum=\count288
+(C:\Users\nonew\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count288
+\FV@InFile=\read2
+\FV@TabBox=\box56
+\c@FancyVerbLine=\count289
+\FV@StepNumber=\count290
+\FV@OutFile=\write3
+)
+\pseudobox=\box57
+\c@qnum=\count291
 )
 
 LaTeX Warning: Unused global option(s):
@@ -454,6 +463,9 @@ b/n/10 เป็นจุดศูนย์กลางวงกลมที่�
 t/10 B$ \TU/THSarabunNew(0)/b/n/10 แล้วความยาวของ
  []
 
+File: circle_image_2.png Graphic file (type bmp)
+<circle_image_2.png>
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -463,10 +475,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-]
-File: circle_image_2.png Graphic file (type bmp)
-<circle_image_2.png>
-) (problems/ton1/functions/02.tex
+] (problems/ton1/functions/02.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--8
 
  []
@@ -477,6 +486,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--8
 
  []
 
+) (problems/ton1/sequences/02.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -484,7 +494,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[2]) (problems/ton1/sequences/02.tex) (problems/ton1/counting/02.tex
+[2]) (problems/ton1/counting/02.tex
 Overfull \hbox (23.70944pt too wide) in paragraph at lines 2--5
 \TU/THSarabunNew(0)/b/n/10 17. ไพ่ปกติหนึ่งสำรับ ต้องหยิบไพ่ออกจากกองอย่างน้อยท
 ี่สุดกี่ใบ จึงจะการันตีว่ามีไพ่ที่หยิบมามีหน้าไพ่อย่างน้อย 2 สัญลักษณ์
@@ -502,12 +512,6 @@ File: circle_image.png Graphic file (type bmp)
 ) (problems/ton1/number-theory/01.tex) (problems/ton1/equations/01.tex)
 (problems/ton1/logic/02.tex) (problems/ton1/sets/01.tex)
 (problems/ton1/equations/03.tex
-Overfull \hbox (44.603pt too wide) in paragraph at lines 2--4
-\TU/THSarabunNew(0)/b/n/10 23. มะลิซื้อส้มโอผลเล็ก ราคาผลละ 30 บาท และผลใหญ่ราค
-าผลละ 35 บาท คิดเป็นเงิน 950 บาท เมื่อนำมารวมกันแล้วขายไปผลละ
- []
-
-) (problems/ton1/real-numbers/02.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -515,8 +519,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[3]) (problems/ton1/equations/06.tex) (problems/ton1/functions/01.tex)
-(problems/ton1/real-numbers/01.tex
+[3]
+Overfull \hbox (44.603pt too wide) in paragraph at lines 2--4
+\TU/THSarabunNew(0)/b/n/10 23. มะลิซื้อส้มโอผลเล็ก ราคาผลละ 30 บาท และผลใหญ่ราค
+าผลละ 35 บาท คิดเป็นเงิน 950 บาท เมื่อนำมารวมกันแล้วขายไปผลละ
+ []
+
+) (problems/ton1/real-numbers/02.tex) (problems/ton1/equations/06.tex)
+(problems/ton1/functions/01.tex) (problems/ton1/real-numbers/01.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
@@ -535,14 +545,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[4] (problems/ton2/programming/08.tex
+[4] (problems/ton2/programming/01.tex) (problems/ton2/programming/02.tex)
+(problems/ton2/programming/03.tex) (problems/ton2/programming/04.tex)
+(problems/ton2/programming/05.tex) (problems/ton2/programming/06.tex)
+(problems/ton2/programming/07.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.94574pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.94574pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
+
+[5]) (problems/ton2/programming/08.tex
 Overfull \hbox (26.46823pt too wide) in paragraph at lines 2--4
-\TU/THSarabunNew(0)/b/n/10 31. ร้านสะดวกซื้อ 67-11 มีโปรโมชันมอบส่วนลดให้แก่ลูก
+\TU/THSarabunNew(0)/b/n/10 38. ร้านสะดวกซื้อ 67-11 มีโปรโมชันมอบส่วนลดให้แก่ลูก
 ค้าตามยอดซื้อและสถานะสมาชิก โดยมีเงื่อนไขตามโปรแกรมด้านล่าง 
  []
 
-) (problems/ton2/programming/09.tex) (problems/ton2/programming/04.tex)
-(problems/ton2/programming/12.tex
+) (problems/ton2/programming/09.tex) (problems/ton2/programming/10.tex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -550,7 +570,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[5]) (problems/ton2/programming/11.tex) (problems/ton2/programming/15.tex
+[6] (problems/ton2/programming/11.tex) (problems/ton2/programming/12.tex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -558,8 +578,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[6]) (problems/ton2/programming/02.tex) (problems/ton2/programming/14.tex)
-(problems/ton2/programming/06.tex) (problems/ton2/programming/07.tex
+[7] (problems/ton2/programming/13.tex) (problems/ton2/programming/14.tex)
+(problems/ton2/programming/15.tex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -567,9 +587,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[7]) (problems/ton2/programming/03.tex) (problems/ton2/programming/01.tex)
-(problems/ton2/programming/13.tex) (problems/ton2/programming/05.tex)
-(problems/ton2/programming/10.tex
+[8] (problems/ton2/algorithms/01.tex
+File: morse_code_table.png Graphic file (type bmp)
+<morse_code_table.png>
+) (problems/ton2/algorithms/02.tex)
+(problems/ton2/algorithms/03.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.94574pt, for example:
@@ -577,137 +599,89 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[8])
+[9]) (problems/ton2/algorithms/04.tex) (problems/ton2/algorithms/05.tex)
+(problems/ton2/algorithms/06.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.94574pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.94574pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
+ []
 
-[9] (problems/ton3/algorithms/08.tex
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^8c in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^9b in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^9c in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^9a in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^83 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^9a in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^8c in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
-Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
-tn;language=dflt;mapping=tex-text;!
 )
-Overfull \hbox (129.63718pt too wide) in paragraph at lines 2--110
-\TU/THSarabunNew(0)/b/n/10 46. เธซเธฒเธ^^81เธ^^81เธณเธซเธ^^99เธ”เน^^84เธงเธขเธฒ
-เธ^^81เธฃเธ“เน^^8c (Grammar) เธ^^82เธญเธ^^87เธ เธฒเธฉเธฒเธซเธ^^99เธถเน^^88เธ^^8
-7เน€เธ^^9bเน^^87เธ^^99
- []
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.94574pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.94574pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-Overfull \hbox (37.97131pt too wide) in paragraph at lines 2--110
-\OT1/cmr/m/n/10 (01)[]00(11)[]$ \TU/THSarabunNew(0)/b/n/10 เธ^^9cเธฅเธ^^81เธฒเธ
-ฃเธฃเธฑเธ^^9aเธฃเธนเน^^89 (Recognition) เธ^^82เธญเธ^^87เธชเธ•เธฃเธดเธ^^87เธ^^84
-เธณเธงเน^^88เธฒ
- []
-
-
-Overfull \hbox (540.30222pt too wide) in paragraph at lines 2--110
-\TU/lmtt/m/n/10 010100 \TU/THSarabunNew(0)/b/n/10 เธ^^88เธฐเน€เธชเธฃเน^^87เธ^^8
-8เธชเธดเน^^89เธ^^99เธ—เธตเน^^88เธชเธ–เธฒเธ^^99เธฐเน^^83เธ” เน^^81เธฅเธฐเธชเธญเธ
-”เธ^^84เธฅเน^^89เธญเธ^^87เธ^^81เธฑเธ^^9aเน^^82เธ^^84เธฃเธ^^87เธชเธฃเน^^89เธฒเธ^
-^87เน^^84เธงเธขเธฒเธ^^81เธฃเธ“เน^^8cเธซเธฃเธทเธญเน^^84เธกเน^^88
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--110
+[10] (problems/ton2/algorithms/07.tex) (problems/ton2/algorithms/08.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-(problems/ton3/algorithms/07.tex
+) (problems/ton2/algorithms/09.tex
+Overfull \hbox (0.6517pt too wide) in paragraph at lines 2--4
+\TU/THSarabunNew(0)/b/n/10 54. ข้อใดคือค่าของผลลัพธ์ $\OML/cmm/m/it/10 A$ \TU/T
+HSarabunNew(0)/b/n/10 ที่ได้จากขั้นตอนวิธีซึ่งแสดงด้วยรหัสเทียมต่อไปนี้ เมื่อกำ
+หนดให้ข้อมูลนำเข้าเริ่มต้นคือ $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
+
+ []
+
+) (problems/ton2/algorithms/10.tex
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \newline
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \newline
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.94574pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.94574pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
+
+[11]
+Overfull \hbox (6.7693pt too wide) in paragraph at lines 31--32
+[]\TU/THSarabunNew(0)/b/n/10 คำถาม: ถ้ารายการเริ่มต้นคือ $\OT1/cmr/m/n/10 [2\OM
+L/cmm/m/it/10 ;  \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 1\OML/cmm
+/m/it/10 ;  \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 3]$ \TU/THSara
+bunNew(0)/b/n/10 เมื่อดำเนินการตามขั้นตอนข้างต้นจนเหลือตัวเลขเพียงตัวเดียว ต้นท
+ุนรวม
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.94574pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.94574pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
+
+[12] (problems/ton3/algorithms/07.tex
 Missing character: There is no ^^9a in font TH Sarabun New Regular/OT:script=la
 tn;language=dflt;mapping=tex-text;!
 Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
@@ -945,57 +919,179 @@ tn;language=dflt;mapping=tex-text;!
 Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
 tn;language=dflt;mapping=tex-text;!
 )
-Overfull \hbox (169.94968pt too wide) in paragraph at lines 2--112
-\TU/THSarabunNew(0)/b/n/10 47. เธ^^9aเธฃเธดเธฉเธฑเธ—เธ^^82เธญเธ^^87เธ^^84เธธเธ“
+Overfull \hbox (169.94968pt too wide) in paragraph at lines 2--242
+\TU/THSarabunNew(0)/b/n/10 56. เธ^^9aเธฃเธดเธฉเธฑเธ—เธ^^82เธญเธ^^87เธ^^84เธธเธ“
 เธ^^9eเน^^88เธญเธฃเธฑเธ^^9aเธ^^88เธฑเธ”เธชเธงเธ^^99เน^^81เธฅเธฐเธ^^9bเธนเธชเธ^^
 99เธฒเธกเธซเธ^^8dเน^^89เธฒเธ—
  []
 
 
-Overfull \hbox (25.60886pt too wide) in paragraph at lines 2--112
+Overfull \hbox (25.60886pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 เธตเน^^88เธ^^9aเน^^89เธฒเธ^^99เน^^81เธซเน^^88เธ^^87เ
 ธซเธ^^99เธถเน^^88เธ^^87 เธชเธ^^99เธฒเธกเธซเธ^^8dเน^^89เธฒเธกเธตเธ^^82เธ^^99เธฒเ
 ธ”
  []
 
 
-Overfull \hbox (266.3071pt too wide) in paragraph at lines 2--112
+Overfull \hbox (266.3071pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 เธ^^81เธงเน^^89เธฒเธ^^87 2 เน€เธกเธ•เธฃ เธขเธฒเธง 20
  เน€เธกเธ•เธฃ เธ^^84เธธเธ“เธ^^9eเน^^88เธญเน^^84เธ”เน^^89เธ^^88เธฑเธ”เธงเธฒเธ^^8
 7เธชเธ^^9bเธฃเธดเธ^^87เน€เธ^^81เธญเธฃเน^^8cเน^^84เธงเน^^89
  []
 
 
-Overfull \hbox (117.50827pt too wide) in paragraph at lines 2--112
+Overfull \hbox (117.50827pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 8 เธ•เธฑเธง เธ^^8bเธถเน^^88เธ^^87เธชเธ^^9bเธฃเธดเธ^^
 87เน€เธ^^81เธญเธฃเน^^8cเน^^81เธ•เน^^88เธฅเธฐเธ•เธฑเธงเธกเธตเธ^^82เธ^^99เธฒเธ”เน
 ^^84เธกเน^^88เน€เธ—
  []
 
 
-Overfull \hbox (246.18015pt too wide) in paragraph at lines 2--112
+Overfull \hbox (246.18015pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 เน^^88เธฒเธ^^81เธฑเธ^^99 เธชเธฒเธกเธฒเธฃเธ–เธ^^89เธต
 เธ”เธ^^99เน^^89เธณเน^^84เธ”เน^^89เธฃเธญเธ^^9aเธ—เธดเธจเธ•เธฒเธกเธฃเธฑเธจเธกเธตเ
 ธ^^82เธญเธ^^87เน^^81เธ•เน^^88เธฅเธฐเธ•เธฑเธง
  []
 
 
-Overfull \hbox (255.75046pt too wide) in paragraph at lines 2--112
+Overfull \hbox (255.75046pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 เน^^82เธ”เธขเธงเธฒเธ^^87เธ•เธฃเธ^^87เน€เธชเน^^89เธ^^
 99เธ^^9bเธฃเธฐเธ^^81เธถเน^^88เธ^^87เธ^^81เธฅเธฒเธ^^87เธ•เธฒเธกเธ^^84เธงเธฒเธกเธ
 ขเธฒเธงเธ^^82เธญเธ^^87เธชเธ^^99เธฒเธกเธซเธ^^8dเน^^89เธฒ
  []
 
 
-Overfull \hbox (27.26901pt too wide) in paragraph at lines 2--112
+Overfull \hbox (27.26901pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 เธ^^88เธฐเธ•เน^^89เธญเธ^^87เน€เธ^^9bเธดเธ”เธชเธ^^9bเ
 ธฃเธดเธ^^87เน€เธ^^81เธญเธฃเน^^8cเธญเธขเน^^88เธฒเธ^^87เธ^^99เน^^89เธญเธขเธ—
  []
 
 
-Overfull \hbox (1.6196pt too wide) in paragraph at lines 2--112
+Overfull \hbox (1.6196pt too wide) in paragraph at lines 2--242
 \TU/THSarabunNew(0)/b/n/10 เธตเน^^88เธชเธธเธ”เธ^^81เธตเน^^88เธ•เธฑเธง เธ^^88เธถ
 เธ^^87เธ^^88เธฐเธ^^84เธฃเธญเธ^^9aเธ^^84เธฅเธธเธกเธ^^9eเธทเน^^89เธ^^99เธ—
+ []
+
+(problems/ton3/algorithms/08.tex
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^8c in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^9b in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^9c in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^9a in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^99 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^83 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^9a in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^82 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^89 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^87 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^81 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^8c in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^84 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+Missing character: There is no ^^88 in font TH Sarabun New Regular/OT:script=la
+tn;language=dflt;mapping=tex-text;!
+)
+Overfull \hbox (129.63718pt too wide) in paragraph at lines 2--246
+\TU/THSarabunNew(0)/b/n/10 57. เธซเธฒเธ^^81เธ^^81เธณเธซเธ^^99เธ”เน^^84เธงเธขเธฒ
+เธ^^81เธฃเธ“เน^^8c (Grammar) เธ^^82เธญเธ^^87เธ เธฒเธฉเธฒเธซเธ^^99เธถเน^^88เธ^^8
+7เน€เธ^^9bเน^^87เธ^^99
+ []
+
+
+Overfull \hbox (37.97131pt too wide) in paragraph at lines 2--246
+\OT1/cmr/m/n/10 (01)[]00(11)[]$ \TU/THSarabunNew(0)/b/n/10 เธ^^9cเธฅเธ^^81เธฒเธ
+ฃเธฃเธฑเธ^^9aเธฃเธนเน^^89 (Recognition) เธ^^82เธญเธ^^87เธชเธ•เธฃเธดเธ^^87เธ^^84
+เธณเธงเน^^88เธฒ
+ []
+
+
+Overfull \hbox (540.30222pt too wide) in paragraph at lines 2--246
+\TU/lmtt/m/n/10 010100 \TU/THSarabunNew(0)/b/n/10 เธ^^88เธฐเน€เธชเธฃเน^^87เธ^^8
+8เธชเธดเน^^89เธ^^99เธ—เธตเน^^88เธชเธ–เธฒเธ^^99เธฐเน^^83เธ” เน^^81เธฅเธฐเธชเธญเธ
+”เธ^^84เธฅเน^^89เธญเธ^^87เธ^^81เธฑเธ^^9aเน^^82เธ^^84เธฃเธ^^87เธชเธฃเน^^89เธฒเธ^
+^87เน^^84เธงเธขเธฒเธ^^81เธฃเธ“เน^^8cเธซเธฃเธทเธญเน^^84เธกเน^^88
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--246
+
  []
 
 
@@ -1005,7 +1101,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.94574pt}.
 
-[10] 
+[13] 
 AED: lastpage setting LastPage
 (main.aux)
  ***********
@@ -1018,12 +1114,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6002 strings out of 409617
- 145276 string characters out of 5774013
- 1932191 words of memory out of 5000000
- 27918 multiletter control sequences out of 15000+600000
- 559856 words of font info for 55 fonts, out of 8000000 for 9000
+ 6493 strings out of 409617
+ 154151 string characters out of 5774013
+ 1935191 words of memory out of 5000000
+ 28373 multiletter control sequences out of 15000+600000
+ 562990 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,12n,96p,1107b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,96p,1049b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (10 pages).
+Output written on main.xdv (13 pages, 154112 bytes).

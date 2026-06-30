@@ -11,6 +11,25 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{tabularx}
+\usepackage{fancyvrb}
+
+% --- ใส่กรอบให้ทุก code block (verbatim) ---
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{frame=single, framesep=6pt, fontsize=\footnotesize}
+
+% --- กรอบสำหรับรหัสเทียม (pseudocode) ---
+\newsavebox{\pseudobox}
+\newenvironment{pseudocode}{%
+  \begin{center}
+  \begin{lrbox}{\pseudobox}
+  \begin{minipage}{0.88\textwidth}
+  \small
+}{%
+  \end{minipage}
+  \end{lrbox}
+  \fbox{\usebox{\pseudobox}}
+  \end{center}
+  \par\medskip
+}
 
 % เพิ่มระยะห่างระหว่างบรรทัดเล็กน้อย เพื่อไม่ให้สระและวรรณยุกต์ภาษาไทยซ้อนทับกัน
 \linespread{1.25}
@@ -24,7 +43,7 @@
 
 % --- ตัวนับเลขข้อแบบรันต่อเนื่อง (Continuous Question Counter) ---
 \newcounter{qnum}
-\newcommand{\question}{\refstepcounter{qnum}\par\medskip\noindent\textbf{\theqnum. }}
+\newcommand{\question}{\filbreak\refstepcounter{qnum}\par\medskip\noindent\textbf{\theqnum. }}
 
 % --- คำสั่งสำหรับสร้างหัวข้อแต่ละตอน ---
 \newcommand{\examsection}[1]{%
