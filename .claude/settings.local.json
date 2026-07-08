@@ -5,7 +5,9 @@
       "Bash(python -c \"import pdfplumber; print\\('pdfplumber available'\\)\")",
       "Bash(python -c \"import fitz; print\\('fitz/pymupdf available'\\)\")",
       "Bash(pip install *)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "PowerShell(python randomize_answers.py)",
+      "PowerShell(python restore_answers.py)"
     ]
   }
 }

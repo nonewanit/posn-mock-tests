@@ -4,10 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build
 
+Each mock test builds independently from its own directory:
+
 ```bash
+cd mock-test-1
 xelatex -no-pdf -interaction=nonstopmode main.tex
 xdvipdfmx main.xdv
 ```
+
+The shared `preamble.tex` is referenced via `\input{../preamble.tex}` from each mock test's `main.tex`.
 
 XeLaTeX is required (not pdfLaTeX) because `fontspec` is used for Thai font support. The document uses **TH Sarabun New** font, which must be installed on the system. On Overleaf, the font file needs to be uploaded into the project.
 
@@ -15,21 +20,35 @@ Build outputs: `.aux`, `.log`, `.pdf`, `.xdv` — these are generated files, nev
 
 ## Architecture
 
-Multi-file LaTeX project for Thai-language POSN (Promotion of Science and Mathematics Talented) 1st Qualification exam papers. Each problem lives in its own file, included via `\input{}` into `main.tex`.
+Multi-file LaTeX project for Thai-language POSN (Promotion of Science and Mathematics Talented) 1st Qualification exam papers. The repo supports multiple mock tests, each in its own self-contained folder sharing a common `preamble.tex`.
 
 ```
-main.tex              — document skeleton (documentclass, \begin{document}, sections, \input calls, \end{document})
-preamble.tex          — shared packages, fonts, geometry, header config, custom commands
-problems/
-  ton1/               — Part 1: Math (multiple choice, 4 choices per question)
-    01.tex .. 03.tex
-  ton2/               — Part 2: Computer Science (multiple choice)
-    04.tex .. 06.tex
-  ton3/               — Part 3: Computer Science (written/fill-in, no choices)
-    07.tex .. 08.tex
+preamble.tex          — shared packages, fonts, geometry, header config, custom commands (used by all mock tests)
+.gitignore            — ignores LaTeX build artifacts (*.aux, *.log, *.xdv, *.synctex.gz, etc.)
+
+mock-test-1/          — Mock Test 1 (60 questions: 30 math + 25 CS MCQ + 5 CS written)
+  main.tex            — document skeleton for this mock test
+  images/             — images for this mock test, named as tonX-category-NN.ext
+  problems/
+    ton1/             — Part 1: Math (multiple choice, 4 choices per question)
+      01.tex .. 30.tex (across subfolders: counting, equations, functions, geometry, logic, number-theory, real-numbers, sequences, sets)
+    ton2/             — Part 2: Computer Science (multiple choice)
+      01.tex .. 25.tex (across subfolders: algorithms, programming)
+    ton3/             — Part 3: Computer Science (written/fill-in, no choices)
+      01.tex .. 05.tex
+
+mock-test-2/          — Mock Test 2 (future), same structure
+  main.tex
+  images/
+  problems/
+    ton1/
+    ton2/
+    ton3/
 ```
 
-To add a new question: create `problems/tonX/NN.tex` with just the `\question` body and `\choices*` call, then add `\input{problems/tonX/NN.tex}` in `main.tex` under the right section.
+To add a new question to a mock test: create `mock-test-N/problems/tonX/category/NN.tex` with just the `\question` body and `\choices*` call, then add `\input{problems/tonX/category/NN.tex}` in that test's `main.tex` under the right section.
+
+To create a new mock test: copy the `mock-test-1/` folder structure (excluding problems), update `main.tex` to include new problem files.
 
 ### Custom LaTeX commands (defined in preamble.tex)
 

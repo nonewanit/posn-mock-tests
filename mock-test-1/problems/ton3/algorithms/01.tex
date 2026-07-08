@@ -1,0 +1,67 @@
+% topic: algorithms
+\question กำหนดตารางค่าระหว่างเลขโรมันและเลขฐานสิบดังนี้
+
+\begin{center}
+\begin{tabular}{|c|*{7}{c|}}
+\hline
+\textbf{เลขโรมัน} & I & V & X & L & C & D & M \\
+\hline
+\textbf{ค่าฐานสิบ} & 1 & 5 & 10 & 50 & 100 & 500 & 1000 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{ขั้นตอนวิธี} สำหรับแปลงเลขโรมันเป็นเลขฐานสิบ มีดังนี้
+
+\begin{pseudocode}
+\textbf{ข้อมูลนำเข้า:} สตริง $S$ ซึ่งประกอบด้วยอักขระเลขโรมัน (เช่น "XIV") \\
+\textbf{ข้อมูลส่งออก:} ค่าฐานสิบที่เป็นผลลัพธ์
+\newline
+1) กำหนดให้ $result = 0$ และ $i = 0$ (ตำแหน่งแรกของสตริง)
+\newline
+2) \textbf{ทำซ้ำ}ตราบใดที่ $i <$ ความยาวของสตริง $S$:
+\newline
+.\quad 2.1) ถ้า $i$ \textbf{ไม่ใช่}ตำแหน่งสุดท้าย \textbf{และ} ค่าของ $S[i] <$ ค่าของ $S[i+1]$:
+\newline
+.\quad.\qquad $result = result - \text{ค่าของ } S[i]$
+\newline
+.\quad 2.2) \textbf{มิฉะนั้น}:
+\newline
+.\quad.\qquad $result = result + \text{ค่าของ } S[i]$
+\newline
+.\quad 2.3) $i = i + 1$
+\newline
+3) แสดงค่า $result$
+\end{pseudocode}
+
+\textbf{ตัวอย่างการทำงาน:} ถ้า $S = \text{"XIV"}$ (X=10, I=1, V=5)
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{รอบที่} ($i$) & $S[i]$ & $S[i+1]$ & \textbf{เงื่อนไข} & \textbf{ค่า result} \\
+\hline
+0 & X (10) & I (1) & $10 < 1$? ไม่ใช่ -> บวก & $0 + 10 = 10$ \\
+1 & I (1) & V (5) & $1 < 5$? ใช่ -> ลบ & $10 - 1 = 9$ \\
+2 & V (5) & (จบ) & ตำแหน่งสุดท้าย -> บวก & $9 + 5 = 14$ \\
+\hline
+\end{tabular}
+\end{center}
+
+ผลลัพธ์ที่ได้คือ \textbf{14}
+
+\textbf{คำถาม:} ถ้า $S = \text{"MMCDLXXIX"}$ เมื่อดำเนินการตามขั้นตอนวิธีข้างต้น จะได้ผลลัพธ์เป็นเลขฐานสิบที่มีค่าเท่าใด
+\newline\newline
+ตอบ ในกระดาษคำตอบ \newline
+% answer: 2479
+% solution: ไล่ตามขั้นตอนวิธีทีละอักขระ
+%   i=0: M=1000, next=M=1000 → 1000<1000? No → +1000 = 1000
+%   i=1: M=1000, next=C=100  → 1000<100?  No → +1000 = 2000
+%   i=2: C=100,  next=D=500  → 100<500?   Yes → -100  = 1900
+%   i=3: D=500,  next=L=50   → 500<50?    No  → +500  = 2400
+%   i=4: L=50,   next=X=10   → 50<10?     No  → +50   = 2450
+%   i=5: X=10,   next=X=10   → 10<10?     No  → +10   = 2460
+%   i=6: X=10,   next=I=1    → 10<1?      No  → +10   = 2470
+%   i=7: I=1,    next=X=10   → 1<10?      Yes → -1    = 2469
+%   i=8: X=10,   (last)      → end         → +10   = 2479
+%   วิธีลัด (สำหรับครู): MM=2000, CD=400, LXX=70, IX=9 → 2479
