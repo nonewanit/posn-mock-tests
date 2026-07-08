@@ -3,8 +3,7 @@
 
 % --- การตั้งค่าภาษาไทยและฟอนต์ ---
 \usepackage{fontspec}
-\setmainfont{TH Sarabun New} % สำหรับโปรแกรมในเครื่องคอมพิวเตอร์ที่มีฟอนต์นี้
-% หากใช้ Overleaf แนะนำให้ดาวน์โหลดฟอนต์ TH Sarabun New มาใส่ในโปรเจกต์ หรือเปลี่ยนเป็น \setmainfont{Sarabun}
+\setmainfont{TH Sarabun New}[Scale=1.5]
 
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
@@ -34,6 +33,9 @@
 % เพิ่มระยะห่างระหว่างบรรทัดเล็กน้อย เพื่อไม่ให้สระและวรรณยุกต์ภาษาไทยซ้อนทับกัน
 \linespread{1.25}
 
+% ป้องกันข้อความล้นขอบกระดาษด้านขวา (overfull hbox) สำหรับภาษาไทยที่ไม่มีช่องว่างระหว่างคำ
+\sloppy
+
 % --- การตั้งค่าหัวกระดาษ (Header) แสดงเลขหน้า "หน้า X/Y" ---
 \pagestyle{fancy}
 \fancyhf{} % ล้างค่าเริ่มต้นทั้งหมด
@@ -44,7 +46,7 @@
 
 % --- ตัวนับเลขข้อแบบรันต่อเนื่อง (Continuous Question Counter) ---
 \newcounter{qnum}
-\newcommand{\question}{\filbreak\refstepcounter{qnum}\par\medskip\noindent\textbf{\theqnum. }}
+\newcommand{\question}{\filbreak\refstepcounter{qnum}\par\medskip\noindent\theqnum. }
 
 % --- คำสั่งสำหรับสร้างหัวข้อแต่ละตอน ---
 \newcommand{\examsection}[1]{%
