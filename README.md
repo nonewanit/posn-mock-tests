@@ -1,14 +1,6 @@
-# POSN Mock Tests — Computer Science Qualification
+# POSN Computer Qualification Mock Tests
 
-ข้อสอบจำลองสำหรับการสอบคัดเลือก (รอบแรก) สอวน. **วิชาคอมพิวเตอร์** เท่านั้น ไม่ครอบคลุมวิชาอื่น (คณิตศาสตร์ ฟิสิกส์ เคมี ชีววิทยา)
-
-Mock tests for the **1st qualification round** of POSN (Promotion of Science and Mathematics Talented) — **Computer Science only**.
-
-## Scope
-
-- **รอบ** : คัดเลือก (Qualification) — รอบแรกเท่านั้น ไม่ใช่รอบสอบปฏิบัติหรือรอบสุดท้าย
-- **วิชา** : วิทยาการคำนวณ (Computer Science) — ไม่ใช่คณิตศาสตร์หรือวิทยาศาสตร์สาขาอื่นของ สอวน.
-- **เนื้อหา** : คณิตศาสตร์พื้นฐาน + การเขียนโปรแกรม + ขั้นตอนวิธี
+ข้อสอบจำลองสำหรับการสอบคัดเลือก (รอบแรก) สอวน. **วิชาคอมพิวเตอร์** 
 
 ## Structure
 
@@ -51,4 +43,4 @@ python randomize_answers.py mock-test-2    # for future tests
 
 ## License
 
-This project is intended for educational use by POSN Computer Science students and instructors in Thailand.
+This project is intended for educational use by POSN Computer students and instructors in Thailand.
