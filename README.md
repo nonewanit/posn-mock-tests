@@ -18,20 +18,46 @@ posn-mock-tests/
 │       ├── ton2/             ← Part 2: CS (25 items, multiple choice)
 │       └── ton3/             ← Part 3: CS (5 items, written/fill-in)
 │
-└── mock-test-2/              ← Mock Test #2 (template — coming soon)
+└── mock-test-2/              ← Mock Test #2 (ready for questions)
 ```
 
 Each mock test is self-contained in its own folder. `preamble.tex` is shared across all tests.
 
 ## Build
 
-Requires XeLaTeX and TH Sarabun New font.
+Requires XeLaTeX and TH Sarabun New font (provided in `fonts/THSarabunNew/`).
+
+### Step 1: Generate main.tex
+
+```bash
+python3 generate_main.py --test-dir mock-test-1 --seed 42
+```
+
+This scans `problems/` and auto-generates `main.tex` with all questions discovered.
+
+### Step 2: Compile
 
 ```bash
 cd mock-test-1
 xelatex -no-pdf -interaction=nonstopmode main.tex
 xdvipdfmx main.xdv
 # Output: main.pdf
+```
+
+### Continuous preview (live update on save)
+
+```bash
+cd mock-test-1
+latexmk -pvc main.tex
+```
+
+Watches all `.tex` files — rebuilds automatically when you save. Open the PDF in VS Code's viewer and it refreshes on each rebuild. Press `Ctrl+C` to stop.
+
+### Creating a new mock test
+
+```bash
+mkdir -p mock-test-3/{problems/{ton1,ton2,ton3},images}
+python3 generate_main.py --test-dir mock-test-3
 ```
 
 ## Answer Key

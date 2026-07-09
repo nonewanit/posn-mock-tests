@@ -3,11 +3,8 @@
 
 % --- การตั้งค่าภาษาไทยและฟอนต์ ---
 \usepackage{fontspec}
+\XeTeXlinebreaklocale "th"  % เปิดใช้การตัดคำภาษาไทย — สำคัญสำหรับ Linux
 \setmainfont{TH Sarabun New}[Scale=1.5]
-
-% เปิดใช้การตัดคำภาษาไทย (Thai line-breaking) — สำคัญมากสำหรับ Linux
-% หากไม่มีบรรทัดนี้ XeTeX จะตัดคำไทยผิดตำแหน่ง ทำให้ spacing ดูแปลก
-\XeTeXlinebreaklocale "th"
 
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
