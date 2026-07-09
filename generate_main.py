@@ -99,6 +99,7 @@ def generate_main_tex(problems, output_file, seed):
     rng = random.Random(seed)
 
     lines = []
+    lines.append("% !TEX program = xelatex")
     lines.append("\\documentclass[16pt,a4paper]{article} % ใช้ขนาดฟอนต์ 16pt ตามมาตรฐานข้อสอบไทย")
     lines.append("\\input{../preamble.tex}")
     lines.append("")
@@ -202,6 +203,12 @@ def main():
 
     generate_main_tex(problems, output_file, args.seed)
     print(f"\nGenerated: {output_file}")
+
+    # Ensure .latexmkrc symlink exists in the test directory
+    latexmkrc = test_dir / ".latexmkrc"
+    if not latexmkrc.exists():
+        latexmkrc.symlink_to("../.latexmkrc")
+        print(f"Created: {latexmkrc}")
 
 
 if __name__ == "__main__":

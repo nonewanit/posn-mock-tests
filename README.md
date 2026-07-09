@@ -23,35 +23,35 @@ posn-mock-tests/
 
 Each mock test is self-contained in its own folder. `preamble.tex` is shared across all tests.
 
-## Build
+## Quick start
 
 Requires XeLaTeX and TH Sarabun New font (provided in `fonts/THSarabunNew/`).
 
-### Step 1: Generate main.tex
-
 ```bash
+# 1. Generate main.tex (auto-discovers all problems/)
 python3 generate_main.py --test-dir mock-test-1 --seed 42
+
+# 2. Start live preview (rebuilds on every save)
+cd mock-test-1
+latexmk -pvc main.tex
 ```
 
-This scans `problems/` and auto-generates `main.tex` with all questions discovered.
+Open `main.pdf` in VS Code's PDF viewer — it refreshes automatically on each save. Press `Ctrl+C` to stop watching.
 
-### Step 2: Compile
+### Manual build (one-shot)
 
 ```bash
 cd mock-test-1
 xelatex -no-pdf -interaction=nonstopmode main.tex
 xdvipdfmx main.xdv
-# Output: main.pdf
 ```
 
-### Continuous preview (live update on save)
+### Clean up
 
 ```bash
 cd mock-test-1
-latexmk -pvc main.tex
+latexmk -C     # removes all generated files
 ```
-
-Watches all `.tex` files — rebuilds automatically when you save. Open the PDF in VS Code's viewer and it refreshes on each rebuild. Press `Ctrl+C` to stop.
 
 ### Creating a new mock test
 
