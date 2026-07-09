@@ -5,6 +5,10 @@
 \usepackage{fontspec}
 \setmainfont{TH Sarabun New}[Scale=1.5]
 
+% เปิดใช้การตัดคำภาษาไทย (Thai line-breaking) — สำคัญมากสำหรับ Linux
+% หากไม่มีบรรทัดนี้ XeTeX จะตัดคำไทยผิดตำแหน่ง ทำให้ spacing ดูแปลก
+\XeTeXlinebreaklocale "th"
+
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
@@ -33,8 +37,10 @@
 % เพิ่มระยะห่างระหว่างบรรทัดเล็กน้อย เพื่อไม่ให้สระและวรรณยุกต์ภาษาไทยซ้อนทับกัน
 \linespread{1.25}
 
-% ป้องกันข้อความล้นขอบกระดาษด้านขวา (overfull hbox) สำหรับภาษาไทยที่ไม่มีช่องว่างระหว่างคำ
-\sloppy
+% ป้องกันข้อความล้นขอบกระดาษสำหรับกรณีที่ยังมี overfull hbox หลงเหลือ
+\setlength{\emergencystretch}{1em}
+\tolerance=1000
+\hfuzz=3pt
 
 % --- การตั้งค่าหัวกระดาษ (Header) แสดงเลขหน้า "หน้า X/Y" ---
 \pagestyle{fancy}

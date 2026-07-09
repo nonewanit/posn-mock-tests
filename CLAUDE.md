@@ -4,13 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build
 
-Each mock test builds independently from its own directory:
+Each mock test builds independently. First generate `main.tex` from the problem files, then compile:
 
 ```bash
+# Step 1: Generate main.tex (auto-discovers all problems/)
+python3 generate_main.py --test-dir mock-test-1 --seed 42
+
+# Step 2: Compile
 cd mock-test-1
 xelatex -no-pdf -interaction=nonstopmode main.tex
 xdvipdfmx main.xdv
 ```
+
+The `generate_main.py` script scans `problems/ton1/`, `problems/ton2/`, `problems/ton3/` recursively for `.tex` files and writes the `main.tex` skeleton with section headers, auto-computed question counts, and shuffled question order (deterministic per seed). Any `.tex` file dropped into the right category folder is automatically included — no manual `\input` editing needed.
 
 The shared `preamble.tex` is referenced via `\input{../preamble.tex}` from each mock test's `main.tex`.
 
@@ -46,9 +52,14 @@ mock-test-2/          — Mock Test 2 (future), same structure
     ton3/
 ```
 
-To add a new question to a mock test: create `mock-test-N/problems/tonX/category/NN.tex` with just the `\question` body and `\choices*` call, then add `\input{problems/tonX/category/NN.tex}` in that test's `main.tex` under the right section.
+To add a new question to a mock test: create `mock-test-N/problems/tonX/category/NN.tex` with just the `\question` body and a `\choices*` call. The first line must be `% topic: <category>`. Then regenerate `main.tex` with `python3 generate_main.py --test-dir mock-test-N`. No manual `\input` editing needed.
 
-To create a new mock test: copy the `mock-test-1/` folder structure (excluding problems), update `main.tex` to include new problem files.
+To create a new mock test:
+```bash
+mkdir -p mock-test-2/{problems/{ton1,ton2,ton3},images}
+python3 generate_main.py --test-dir mock-test-2
+# Add .tex problem files into problems/tonX/category/, then regenerate
+```
 
 ### Custom LaTeX commands (defined in preamble.tex)
 

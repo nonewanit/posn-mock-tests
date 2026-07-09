@@ -7,12 +7,13 @@ Each .tex file must have a "% topic: <key>" comment on its first line.
 Questions within each ton are randomly shuffled using a fixed seed for reproducibility.
 
 Usage:
-    python generate_main.py              # Generate main.tex with default seed
-    python generate_main.py --seed 123   # Use a different seed
-    python generate_main.py -h           # Show help
+    python generate_main.py --test-dir mock-test-1              # Generate for a specific mock test
+    python generate_main.py --test-dir mock-test-1 --seed 123   # Use a different seed
+    python generate_main.py -h                                  # Show help
 """
 
 import sys
+import argparse
 import random
 from pathlib import Path
 
@@ -20,15 +21,12 @@ from pathlib import Path
 # CONFIGURATION — Edit these values as needed
 # =============================================================================
 
-# Random seed: change this to get a different shuffle.
+# Default random seed: change this to get a different shuffle.
 # The same seed always produces the same question order.
-SEED = 42
+DEFAULT_SEED = 42
 
-# Directory containing problem files
-PROBLEMS_DIR = Path("problems")
-
-# Output file
-OUTPUT_FILE = Path("main.tex")
+# Default mock test directory
+DEFAULT_TEST_DIR = "mock-test-1"
 
 # Section configuration per ton (in order they appear in the exam)
 # {count}, {start}, {end} are filled in automatically from the actual file counts.
@@ -60,8 +58,9 @@ TON_SECTIONS = [
 def find_problem_files(problems_dir):
     """
     Scan problems/ directory recursively for .tex files.
-    Returns: dict mapping ton_name -> list of (topic, filepath)
+    Returns: dict mapping ton_name -> list of (topic, filepath_relative_to_test_dir)
     """
+    test_dir = problems_dir.parent
     problems = {}
     for ton_dir in sorted(problems_dir.iterdir()):
         if not ton_dir.is_dir():
@@ -71,7 +70,9 @@ def find_problem_files(problems_dir):
 
         for tex_file in sorted(ton_dir.rglob("*.tex")):
             topic = read_topic(tex_file)
-            problems[ton].append((topic, tex_file))
+            # Store path relative to the test directory (e.g. mock-test-1)
+            rel_path = tex_file.relative_to(test_dir)
+            problems[ton].append((topic, rel_path))
 
     return problems
 
@@ -99,7 +100,7 @@ def generate_main_tex(problems, output_file, seed):
 
     lines = []
     lines.append("\\documentclass[16pt,a4paper]{article} % ใช้ขนาดฟอนต์ 16pt ตามมาตรฐานข้อสอบไทย")
-    lines.append("\\input{preamble.tex}")
+    lines.append("\\input{../preamble.tex}")
     lines.append("")
     lines.append("\\begin{document}")
 
@@ -172,23 +173,35 @@ def print_summary(problems):
 
 
 def main():
-    global SEED
+    parser = argparse.ArgumentParser(
+        description="Generate main.tex from problem files in problems/ directory."
+    )
+    parser.add_argument(
+        "--test-dir", default=DEFAULT_TEST_DIR,
+        help=f"Mock test directory (default: {DEFAULT_TEST_DIR})",
+    )
+    parser.add_argument(
+        "--seed", type=int, default=DEFAULT_SEED,
+        help=f"Random seed for shuffling (default: {DEFAULT_SEED})",
+    )
+    args = parser.parse_args()
 
-    # Parse command-line arguments
-    if len(sys.argv) > 1:
-        if sys.argv[1] == "--seed" and len(sys.argv) > 2:
-            SEED = int(sys.argv[2])
-        elif sys.argv[1] in ("-h", "--help"):
-            print(__doc__)
-            return
+    test_dir = Path(args.test_dir)
+    problems_dir = test_dir / "problems"
+    output_file = test_dir / "main.tex"
 
-    print(f"Using seed: {SEED}")
+    if not problems_dir.is_dir():
+        print(f"Error: problems/ directory not found in {test_dir}")
+        sys.exit(1)
 
-    problems = find_problem_files(PROBLEMS_DIR)
+    print(f"Test directory: {test_dir}")
+    print(f"Using seed: {args.seed}")
+
+    problems = find_problem_files(problems_dir)
     print_summary(problems)
 
-    generate_main_tex(problems, OUTPUT_FILE, SEED)
-    print(f"\nGenerated: {OUTPUT_FILE}")
+    generate_main_tex(problems, output_file, args.seed)
+    print(f"\nGenerated: {output_file}")
 
 
 if __name__ == "__main__":
