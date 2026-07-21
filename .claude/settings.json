@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(python3 /home/none/projects/posn-mock-tests/generate_main.py --test-dir /home/none/projects/posn-mock-tests/mock-test-2)",
-      "Bash(latexmk -C)",
-      "Bash(python3 -c ' *)"
-    ]
-  }
-}

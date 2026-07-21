@@ -8,3 +8,5 @@
 *.fls
 __MACOSX
 key.txt
+
+.claude
