@@ -1,0 +1,58 @@
+% topic: programming
+\question โปรแกรมใดที่เงื่อนไขทำงานต่างจากโปรแกรมอื่น
+
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม A}
+\begin{verbatim}
+if x >= 80:
+    print("A")
+elif x >= 70:
+    print("B")
+else:
+    print("C")
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม B}
+\begin{verbatim}
+if x < 70:
+    print("C")
+elif x < 80:
+    print("B")
+else:
+    print("A")
+\end{verbatim}
+\end{minipage}
+
+\vspace{6pt}
+
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม C}
+\begin{verbatim}
+if x >= 80:
+    print("A")
+if x < 70:
+    print("C")
+else:
+    print("B)
+\end{verbatim}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{โปรแกรม D}
+\begin{verbatim}
+if x < 70:
+    print("C")
+if x >= 80:
+    print("A")
+if x < 80 and x >= 70:
+    print("B")
+\end{verbatim}
+\end{minipage}
+\end{center}
+
+\choiceshorizontal{โปรแกรม A}{โปรแกรม B}{โปรแกรม C}{โปรแกรม D}
+
+% answer: 3

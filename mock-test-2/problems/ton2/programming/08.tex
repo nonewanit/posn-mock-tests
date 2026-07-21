@@ -1,0 +1,21 @@
+% topic: programming
+\question บริษัทแห่งหนึ่งได้เขียนโค้ดภาษา Python เพื่อคำนวณภาษีเงินได้ประจำปีของพนักงานตามเกณฑ์ขั้นบันได ดังนี้:
+\begin{itemize}
+    \item รายได้ น้อยกว่า 30,000 บาท เสียภาษี 0\%
+    \item รายได้ ตั้งแต่ 30,000 ถึง 100,000 บาท เสียภาษี 10\%
+    \item รายได้ มากกว่า 100,000 บาท เสียภาษี 20\%
+\end{itemize}
+นักพัฒนาได้ส่งโค้ดนี้เข้าสู่ระบบ:
+\begin{verbatim}
+if income < 30000:
+    return 0
+elif income > 30000 and income < 100000:
+    return income * 0.10
+elif income > 100000:
+    return income * 0.20
+else:
+    return 0
+\end{verbatim}
+ระบบนี้มีบั๊ก ทำให้พนักงานบางคนไม่ต้องเสียภาษีเลยสักบาท ทั้งที่จริง ๆ แล้วพวกเขาต้องเสียภาษี ค่าที่ทำให้เกิดบั๊กตรงกับข้อใด\newline
+\choicesgrid{income = 29999 และ income = 100001}{income = 30000 และ income = 100000}{income = 0 และ income = 50000}{income = -5000 และ income = 100000}
+% answer: 2

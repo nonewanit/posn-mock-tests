@@ -1,0 +1,15 @@
+% topic: programming
+\question สตริง s ต้องเท่ากับข้อใดจึงจะแสดงผลลัพธ์เป็น OK
+\begin{verbatim}
+s = "???"
+i = 0
+n = len(s)
+ch = True
+while i < n:
+    if s[i] != s[n-i-1]:
+        ch = False
+if ch == True:
+    print("OK")
+\end{verbatim}
+\choicesgrid{RIVER}{AURA}{LEVEL}{ARENA}
+% answer: 3

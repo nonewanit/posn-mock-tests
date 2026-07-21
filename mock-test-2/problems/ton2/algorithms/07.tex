@@ -1,0 +1,26 @@
+% topic: algorithms
+\question ขั้นตอนวิธีต่อไปนี้จะแสดงค่าตรงกับข้อใด ถ้าชุดข้อมูล data เริ่มต้นมีค่าเท่ากับ [10, 7, 3, 9, 11]
+\begin{pseudocode}
+\begin{enumerate}
+    \item ให้ N เป็นจำนวนข้อมูลในชุดข้อมูล data 
+    \item ทำซ้ำ 3.1 ให้ i เริ่มต้นตั้งแต่ 1 ถึง N แต่ละรอบเพิ่มค่า i ทีละ 1 
+    \begin{enumerate}
+        \item ให้ a มีค่าเท่ากับค่าข้อมูล data ณ ตำแหน่งที่ i 
+        \item กำหนดให้ S มีค่าเท่ากับ 0
+        \item ทำซ้ำ 3.1 ให้ j เริ่มต้นตั้งแต่ 1 ถึง N แต่ละรอบเพิ่มค่า i ทีละ 1 
+        \begin{enumerate}
+            \item ให้ b มีค่าเท่ากับค่าข้อมูล data ณ ตำแหน่งที่ j
+            \item ถ้า b มีค่าน้อยกว่า a
+            \begin{enumerate}
+                \item ให้ S มีค่าเท่ากับ S + 1
+            \end{enumerate}
+        \end{enumerate}
+        \item ถ้า S มีค่าเท่ากับ n หารด้วย 2 ปัดเศษลง
+        \begin{enumerate}
+            \item พิมพ์ data ณ ตำแหน่งที่ i
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+\end{pseudocode}
+\choiceshorizontal{3}{7}{9}{11}
+% answer: 3

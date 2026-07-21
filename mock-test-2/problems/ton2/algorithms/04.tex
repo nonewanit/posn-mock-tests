@@ -1,0 +1,20 @@
+﻿% topic: algorithms
+\question ขั้นตอนวิธีต่อไปนี้ ในขั้นตอนที่ 2.2. มีการเปรียบเทียบค่า i กี่ครั้ง 
+\begin{pseudocode}
+\begin{enumerate}
+    \item ให้ตัวแปร i เท่ากับ 0 
+    \item ให้ i เท่ากับ i+1 
+    \begin{enumerate}
+        \item ถ้า i น้อยกว่า 4
+        \begin{enumerate}
+            \item กลับไปทำข้อ 2 
+        \end{enumerate}
+        \item มิฉะนั้น
+        \begin{enumerate}
+            \item กลับไปทำข้อ 1
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+\end{pseudocode}
+\choicesvertical{0}{1}{4}{ถูกเปรียบเทียบไม่สิ้นสุด เพราะ โปรแกรมทำงานเป็นลูปไม่มีที่สิ้นสุด (infinite loop)}
+% answer: 4

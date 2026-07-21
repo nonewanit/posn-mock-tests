@@ -1,0 +1,19 @@
+﻿% topic: algorithms
+\question ขั้นตอนวิธีต่อไปนี้ ถ้า n มีค่าเท่ากับ 300 จะแสดงค่าตรงกับข้อใด
+\begin{pseudocode}
+\begin{enumerate}
+    \item ให้ n เป็นจำนวนเต็มบวก 
+    \item ให้ตัวแปร i มีค่าเป็น 2 
+    \item ทำซ้ำเมื่อ n > 0
+    \begin{enumerate}
+        \item ทำซ้ำเมื่อ n หารด้วย i เท่ากับ 0
+        \begin{enumerate}
+            \item พิมพ์ i
+            \item n เท่ากับ n / i
+        \end{enumerate}
+        \item i เท่ากับ i + 1
+    \end{enumerate}
+\end{enumerate}
+\end{pseudocode}
+\choicesgrid{2 2 3 5 5}{2 2 3 3 5 5}{2 3 5}{2 2 3 5}
+% answer: 1

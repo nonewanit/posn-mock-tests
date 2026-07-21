@@ -1,0 +1,18 @@
+% topic: programming
+\question ข้อใดคือรายการข้อมูลของ data หลังจากโปรแกรมทำงานเสร็จ
+\begin{verbatim}
+data = [10, 20, 30, 40, 50, 60]
+k = 3
+n = len(data)
+i = 0
+while i < k:
+    j = 0
+    temp = data[i]
+    while j < n:
+        data[j] = data[j] + temp
+        j = j + 1
+    i = i + 1
+print(data)
+\end{verbatim}
+\choicesgrid{[100, 110, 120, 130, 140, 150, 160]}{[110, 120, 130, 140, 150, 160]}{[120, 130, 140, 150, 160, 170]}{[130, 140, 150, 160, 170, 180]}
+% answer: 3
