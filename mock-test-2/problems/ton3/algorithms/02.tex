@@ -1,0 +1,28 @@
+% topic: algorithms
+\question กำหนดลูกตุ้มน้ำหนัก 3 ขนาด ได้แก่ \textbf{5}, \textbf{7} และ \textbf{20} หน่วย โดยมีจำนวนไม่จำกัดในแต่ละขนาด ต้องการนำลูกตุ้มเหล่านี้มาวางรวมกันบนตาชั่งเพื่อให้ได้น้ำหนักรวมต่าง ๆ
+
+\textbf{ตัวอย่างน้ำหนักที่สร้างได้:}
+\begin{itemize}
+  \item $5 = 5$
+  \item $7 = 7$
+  \item $10 = 5 + 5$
+  \item $12 = 5 + 7$
+  \item $20 = 20$ (หรือ $5+5+5+5$)
+\end{itemize}
+
+\textbf{ตัวอย่างน้ำหนักที่สร้างไม่ได้:} $1, 4, 8, 11$
+
+\medskip
+\textbf{คำถาม:} จงหาจำนวนเต็มบวกที่มากที่สุดที่\textbf{ไม่สามารถ}สร้างได้จากการรวมลูกตุ้มน้ำหนัก 5, 7 และ 20 หน่วย (ตอบเป็นตัวเลขจำนวนเต็ม)
+
+\par\medskip
+ตอบ ในกระดาษคำตอบ
+% answer: 23
+% solution:
+%   This is the Frobenius coin problem.
+%   With weights {5, 7, 20}, note that 20 is a multiple of 5.
+%   So the set reduces to {5, 7} for the Frobenius calculation.
+%   Frobenius(5, 7) = 5*7 - 5 - 7 = 35 - 12 = 23.
+%   Adding 20 doesn't help for numbers below ~24 since 20+5=25 > 23.
+%   Therefore, the largest number that cannot be formed is 23.
+%   All numbers >= 24 are guaranteed formable.

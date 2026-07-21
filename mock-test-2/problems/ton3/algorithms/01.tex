@@ -1,0 +1,42 @@
+% topic: algorithms
+\question \textbf{ระยะห่างระหว่างข้อความ (Edit Distance)} หรือ \textbf{ระยะทาง Levenshtein} คือจำนวนการดำเนินการ\textbf{น้อยที่สุด}ที่ใช้ในการแปลงข้อความหนึ่งไปเป็นอีกข้อความหนึ่ง โดยการดำเนินการที่อนุญาตมี 3 แบบ ได้แก่:
+
+\begin{itemize}
+  \item \textbf{การแทรก (Insert):} เพิ่มอักขระ 1 ตัว ลงในข้อความ
+  \item \textbf{การลบ (Delete):} ลบอักขระ 1 ตัว ออกจากข้อความ
+  \item \textbf{การแทนที่ (Substitute):} เปลี่ยนอักขระ 1 ตัว เป็นอีกอักขระหนึ่ง
+\end{itemize}
+
+\medskip
+\textbf{ตัวอย่าง:} แปลง \textbf{"TAXED"} เป็น \textbf{"AXING"}
+
+\begin{center}
+\begin{tabular}{ccccccc}
+T & A & X & E & D &   &   \\
+$\downarrow$ &   &   & $\downarrow$ & $\downarrow$ & $\searrow$ \\
+  & A & X & I & N & G &   \\
+\end{tabular}
+\end{center}
+
+การดำเนินการที่น้อยที่สุด:
+\begin{itemize}
+  \item ลบ T \hspace{2.5em} (ลบ)
+  \item E $\rightarrow$ I \hspace{2em} (แทนที่)
+  \item D $\rightarrow$ N \hspace{1.5em} (แทนที่)
+  \item เพิ่ม G \hspace{2em} (แทรก)
+\end{itemize}
+รวม \textbf{4} การดำเนินการ $\rightarrow$ Edit Distance = \textbf{4}
+
+\medskip
+\textbf{คำถาม:} จงคำนวณหาระยะห่างระหว่างข้อความ (Edit Distance) ของ \newline
+$S_1 = \text{"MISUNDERSTANDINGLY"}$ กับ $S_2 = \text{"UNDERSTANDABLENESS"}$ \newline
+(ตอบเป็นตัวเลขจำนวนเต็ม)
+
+\par\medskip
+ตอบ ในกระดาษคำตอบ
+% answer: 10
+% solution:
+%   S1 = MISUNDERSTANDINGLY (18): M-I-S-U-N-D-E-R-S-T-A-N-D-I-N-G-L-Y
+%   S2 = UNDERSTANDABLENESS (18): U-N-D-E-R-S-T-A-N-D-A-B-L-E-N-E-S-S
+%   Backtrace: del=3 (M,I,S), ins=3 (A,B,E), sub=4 (G→S, L→S, Y→?)
+%   Verified by DP: edit_distance("MISUNDERSTANDINGLY", "UNDERSTANDABLENESS") = 10

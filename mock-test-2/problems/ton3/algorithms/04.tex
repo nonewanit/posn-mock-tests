@@ -1,0 +1,41 @@
+% topic: algorithms
+\question คุณครูมีลูกอมอยู่กล่องหนึ่ง ต้องการแจกให้นักเรียนจำนวน \textbf{10 คน} ที่ยืนเรียงแถวกัน โดยมีกฎการแจกดังนี้:
+
+\begin{itemize}
+  \item นักเรียนแต่ละคนต้องได้ลูกอม\textbf{อย่างน้อย 1 ชิ้น}
+  \item นักเรียนที่มีคะแนน\textbf{มากกว่า}เพื่อนที่อยู่ติดกัน (ซ้ายหรือขวา) จะต้องได้ลูกอม\textbf{มากกว่า}เพื่อนคนนั้น
+  \item คุณครูต้องการใช้ลูกอมจำนวน\textbf{น้อยที่สุด}ที่เป็นไปได้
+\end{itemize}
+
+คะแนนของนักเรียนทั้ง 10 คนจากซ้ายไปขวา มีดังนี้:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{คนที่} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+\textbf{คะแนน} & 3 & 5 & 5 & 4 & 2 & 3 & 7 & 7 & 6 & 4 \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{คำถาม:} คุณครูจะต้องใช้ลูกอม\textbf{อย่างน้อยที่สุด}ทั้งหมดกี่ชิ้น (ตอบเป็นตัวเลขจำนวนเต็ม)
+
+\par\medskip
+ตอบ ในกระดาษคำตอบ
+% answer: 20
+% solution:
+%   Standard "candy" problem — two-pass greedy.
+%   Scores: [3, 5, 5, 4, 2, 3, 7, 7, 6, 4]
+%
+%   Pass 1 (left to right):
+%   If score[i] > score[i-1]: candy[i] = candy[i-1] + 1
+%   Else: candy[i] = 1
+%   -> [1, 2, 1, 1, 1, 2, 3, 1, 1, 1]
+%
+%   Pass 2 (right to left):
+%   If score[i] > score[i+1]: candy[i] = max(candy[i], candy[i+1] + 1)
+%   -> [1, 2, 3, 2, 1, 2, 3, 3, 2, 1]
+%
+%   Total = 1+2+3+2+1+2+3+3+2+1 = 20

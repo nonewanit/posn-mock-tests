@@ -1,0 +1,65 @@
+% topic: algorithms
+\question \textbf{การดำเนินการทางตรรกะระดับบิต (Bitwise Operations)} คือการดำเนินการทางตรรกศาสตร์กับเลขฐานสองทีละหลัก (บิต) โดยมีตัวดำเนินการพื้นฐาน 4 ชนิด สำหรับเลขฐานสองขนาด \textbf{4 หลัก} ดังนี้:
+
+\medskip
+\noindent
+กำหนด $X = 1011_2$ และ $Y = 0110_2$
+
+\begin{itemize}
+  \item \textbf{AND (\&):} ผลลัพธ์เป็น 1 ก็ต่อเมื่อทั้งสองบิตเป็น 1 \\
+        ตัวอย่าง: $X$ \& $Y$ = $1011_2$ \& $0110_2$ = $0010_2$ \quad (ตรวจสอบทีละหลัก)
+
+  \item \textbf{OR ($|$):} ผลลัพธ์เป็น 1 ก็ต่อเมื่อมีอย่างน้อยหนึ่งบิตเป็น 1 \\
+        ตัวอย่าง: $X$ $|$ $Y$ = $1011_2$ $|$ $0110_2$ = $1111_2$
+
+  \item \textbf{NOT ($\sim$):} กลับค่าทุกบิต (0 เป็น 1, 1 เป็น 0) \\
+        ตัวอย่าง: $\sim X$ = $\sim 1011_2$ = $0100_2$
+
+  \item \textbf{XOR (\textasciicircum):} ผลลัพธ์เป็น 1 ก็ต่อเมื่อทั้งสองบิตแตกต่างกัน \\
+        ตัวอย่าง: $X$ \textasciicircum{} $Y$ = $1011_2$ \textasciicircum{} $0110_2$ = $1101_2$
+\end{itemize}
+
+\medskip
+\textbf{ลำดับความสำคัญของตัวดำเนินการ (Precedence)} จากสูงไปต่ำ:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{ลำดับ} & \textbf{ตัวดำเนินการ} & \textbf{ความหมาย} \\
+\hline
+1 (สูงสุด) & $\sim$ & NOT \\
+2 & \& & AND \\
+3 & \textasciicircum & XOR \\
+4 (ต่ำสุด) & $|$ & OR \\
+\hline
+\end{tabular}
+\end{center}
+
+ตัวดำเนินการที่มีลำดับสูงกว่าจะถูกคำนวณก่อน วงเล็บ \textbf{( )} ใช้สำหรับจัดกลุ่มและจะถูกคำนวณก่อนตัวดำเนินการทั้งหมด
+
+\medskip
+\textbf{คำถาม:} กำหนดเลขฐานสองขนาด 4 หลักดังนี้
+
+\begin{center}
+$A = 1011_2$ \qquad $B = 0110_2$ \qquad $C = 1101_2$
+\end{center}
+
+จงหาผลลัพธ์ของนิพจน์ต่อไปนี้ \newline
+(ตอบเป็นเลขฐานสอง \textbf{4 หลัก} โดยต้องเขียนเลข 0 นำหน้าด้วย เช่น $0011$ ไม่ใช่ $11$)
+
+\begin{center}
+\textbf{NOT((A AND B) XOR C) OR (NOT A AND B)}
+\end{center}
+
+\par\medskip
+ตอบ ในกระดาษคำตอบ
+% answer: 0100
+% solution:
+%   Step-by-step (all in 4-bit):
+%   1) A AND B  = 1011 & 0110 = 0010
+%   2) (A AND B) XOR C = 0010 ^ 1101 = 1111
+%   3) NOT((A AND B) XOR C) = NOT(1111) = 0000
+%   4) NOT A = NOT(1011) = 0100
+%   5) NOT A AND B = 0100 & 0110 = 0100
+%   6) 0000 OR 0100 = 0100
+%   Answer: 0100₂ = 4₁₀

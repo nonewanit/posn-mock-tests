@@ -1,0 +1,53 @@
+% topic: algorithms
+\question \textbf{การเรียงลำดับแบบบับเบิล (Bubble Sort)} เป็นขั้นตอนวิธีการเรียงลำดับข้อมูลจากน้อยไปมาก โดยเปรียบเทียบข้อมูลที่อยู่ติดกันและ\textbf{สลับที่}กันเมื่อข้อมูลตัวซ้ายมากกว่าตัวขวา ทำเช่นนี้ไปเรื่อย ๆ จนข้อมูลทั้งหมดเรียงลำดับ
+
+\medskip
+\noindent
+\textbf{ขั้นตอนวิธี Bubble Sort} สำหรับอาร์เรย์ $A$ ขนาด $n$:
+
+\begin{pseudocode}
+1) ทำซ้ำสำหรับ $i = 0$ ถึง $n-2$:\newline
+.\quad 2) ทำซ้ำสำหรับ $j = 0$ ถึง $n-2-i$:\newline
+.\quad\quad 3) ถ้า $A[j] > A[j+1]$ แล้ว:\newline
+.\quad\quad\qquad สลับค่า $A[j]$ กับ $A[j+1]$\newline
+\end{pseudocode}
+
+\medskip
+\textbf{ตัวอย่าง:} กำหนดอาร์เรย์ $A = [5, 1, 4, 2, 8]$
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{รอบที่ $i$} & \textbf{$j=0$} & \textbf{$j=1$} & \textbf{$j=2$} & \textbf{$j=3$} & \textbf{จำนวนสลับ} \\
+\hline
+เริ่มต้น    &  5, 1, 4, 2, 8  &                &                &                & --- \\
+$i=0$       &  1, 5, 4, 2, 8  &  1, 4, 5, 2, 8 &  1, 4, 2, 5, 8 &  ไม่สลับ ($5<8$)  & 3 ครั้ง \\
+$i=1$       &  1, 4, 2, 5, 8  &  1, 2, 4, 5, 8 &  ไม่สลับ ($4<5$)  &  ---            & 2 ครั้ง \\
+$i=2$       &  1, 2, 4, 5, 8  &  ไม่สลับ ($2<4$)  &  ---            &  ---            & 0 ครั้ง \\
+$i=3$       &  1, 2, 4, 5, 8  &  ---            &  ---            &  ---            & 0 ครั้ง \\
+\hline
+\end{tabular}
+\end{center}
+
+รวมจำนวนครั้งที่สลับทั้งหมด $= 3 + 2 + 0 + 0 = \textbf{5}$ ครั้ง
+
+\medskip
+\textbf{คำถาม:} กำหนดอาร์เรย์ \newline
+$A = [8, 3, 5, 1, 7, 2, 6]$ \newline
+เมื่อนำ Bubble Sort มาใช้เรียงลำดับอาร์เรย์นี้จากน้อยไปมาก จะมีการ\textbf{สลับที่}ข้อมูลทั้งหมดกี่ครั้ง (ตอบเป็นตัวเลขจำนวนเต็ม)
+
+\par\medskip
+ตอบ ในกระดาษคำตอบ
+% answer: 12
+% solution:
+%   Bubble sort swap count = number of inversions.
+%   Array: [8, 3, 5, 1, 7, 2, 6]
+%   Count elements to right that are smaller:
+%   8: 3,5,1,7,2,6 → 6
+%   3: 1,2 → 2
+%   5: 1,2 → 2
+%   1: none → 0
+%   7: 2,6 → 2
+%   2: none → 0
+%   6: none → 0
+%   Total = 6+2+2+0+2+0+0 = 12 swaps
