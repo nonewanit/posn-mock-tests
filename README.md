@@ -1,72 +1,57 @@
-# POSN Computer Qualification Mock Tests
+# POSN Computer Qualification — Mock Tests
 
-ข้อสอบจำลองสำหรับการสอบคัดเลือก (รอบแรก) สอวน. **วิชาคอมพิวเตอร์** 
+ข้อสอบจำลองสำหรับการสอบคัดเลือกเข้าค่าย 1 สอวน. วิชาคอมพิวเตอร์
 
-## Structure
+## โครงสร้างข้อสอบ
 
-```
-posn-mock-tests/
-├── preamble.tex              ← shared LaTeX preamble (fonts, commands, layout)
-├── generate_main.py          ← script to auto-generate main.tex with shuffled questions
-├── randomize_answers.py      ← extract answer keys from problem files
-│
-├── mock-test-1/              ← Mock Test #1 (60 questions)
-│   ├── main.tex
-│   ├── images/
-│   └── problems/
-│       ├── ton1/             ← Part 1: Math basics (30 items, multiple choice)
-│       ├── ton2/             ← Part 2: CS (25 items, multiple choice)
-│       └── ton3/             ← Part 3: CS (5 items, written/fill-in)
-│
-└── mock-test-2/              ← Mock Test #2 (ready for questions)
-```
+ข้อสอบ POSN รอบแรก (คัดเลือก) แบ่งเป็น 3 ตอน:
 
-Each mock test is self-contained in its own folder. `preamble.tex` is shared across all tests.
+| ตอน | เนื้อหา | รูปแบบ | จำนวนข้อ |
+|---|---|---|---|
+| ตอนที่ 1 | คณิตศาสตร์ | ปรนัย 4 ตัวเลือก | 30 ข้อ |
+| ตอนที่ 2 | วิทยาการคำนวณ | ปรนัย 4 ตัวเลือก | 25 ข้อ |
+| ตอนที่ 3 | วิทยาการคำนวณ | อัตนัย (เติมคำตอบ) | 5 ข้อ |
 
-## Quick start
+## เนื้อหาที่ออกสอบ
 
-Requires XeLaTeX and TH Sarabun New font (provided in `fonts/THSarabunNew/`).
+| ตอนที่ 1 — คณิตศาสตร์ | ตอนที่ 2 — วิทยาการคำนวณ | ตอนที่ 3 — อัตนัย |
+|---|---|---|
+| การนับเบื้องต้น (Counting) | ขั้นตอนวิธี (Algorithms) | ขั้นตอนวิธี (Algorithms) |
+| สมการ (Equations) | การเขียนโปรแกรม (Programming) | |
+| ฟังก์ชัน (Functions) | | |
+| เรขาคณิต (Geometry) | | |
+| ตรรกศาสตร์ (Logic) | | |
+| ทฤษฎีจำนวน (Number Theory) | | |
+| จำนวนจริง (Real Numbers) | | |
+| ลำดับ (Sequences) | | |
+| เซต (Sets) | | |
 
-```bash
-# 1. Generate main.tex (auto-discovers all problems/)
-python3 generate_main.py --test-dir mock-test-1 --seed 42
+## ข้อสอบที่มี
 
-# 2. Start live preview (rebuilds on every save)
-cd mock-test-1
-latexmk -pvc main.tex
-```
+| ชุดที่ | สถานะ |
+|---|---|
+| [mock-test-1](mock-test-1/main.pdf) | พร้อมใช้งาน — 60 ข้อ |
+| [mock-test-2](mock-test-2/main.pdf) | พร้อมใช้งาน — 60 ข้อ |
 
-Open `main.pdf` in VS Code's PDF viewer — it refreshes automatically on each save. Press `Ctrl+C` to stop watching.
+## สำหรับผู้สอน/ผู้พัฒนา
 
-### Manual build (one-shot)
+ดู [BUILD.md](BUILD.md) สำหรับวิธีการติดตั้ง คอมไพล์ เพิ่มโจทย์ และสร้างข้อสอบชุดใหม่
 
-```bash
-cd mock-test-1
-xelatex -no-pdf -interaction=nonstopmode main.tex
-xdvipdfmx main.xdv
-```
+## Credits
 
-### Clean up
-
-```bash
-cd mock-test-1
-latexmk -C     # removes all generated files
-```
-
-### Creating a new mock test
-
-```bash
-mkdir -p mock-test-3/{problems/{ton1,ton2,ton3},images}
-python3 generate_main.py --test-dir mock-test-3
-```
-
-## Answer Key
-
-```bash
-python randomize_answers.py mock-test-1    # writes key.txt into mock-test-1/
-python randomize_answers.py mock-test-2    # for future tests
-```
+- ผู้เขียน: [None Wanitchollakit (Yuan)](https://github.com/nonewanit)
+- หากพบข้อผิดพลาด แจ้งได้ที่ [GitHub Issues](../../issues)
+- เนื้อหาอ้างอิงตาม เนื้อหาข้อสอบคัดเลือกเข้าค่าย 1 สอวน. วิชาคอมพิวเตอร์ ปีการศึกษา 2569
+- ข้อสอบจริงจากข้อสอบวิชาคอมพิวเตอร์ เพื่อคัดเลือกนักเรียนเข้ารับการอบรมค่าย 1 สอวน. ปี 2565, 2566, 2567, 2568
+- เนื้อหาบางส่วนสร้างด้วยความช่วยเหลือของ AI และผ่านการตรวจสอบโดยผู้เขียน
 
 ## License
 
-This project is intended for educational use by POSN Computer students and instructors in Thailand.
+เนื้อหาทั้งหมดใน repository นี้อยู่ภายใต้สัญญาอนุญาต
+[CC BY-NC-SA 4.0](LICENSE)
+
+**โดยสรุป:**
+- ใช้ได้ฟรีเพื่อการศึกษา — แจกจ่าย ดัดแปลง แปล ได้ตามต้องการ
+- ต้องให้เครดิตผู้แต่ง
+- งานดัดแปลงต้องใช้ license CC BY-NC-SA เช่นกัน
+- ❌ ห้ามใช้ในเชิงพาณิชย์
