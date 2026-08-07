@@ -28,10 +28,10 @@
 
 ## ข้อสอบที่มี
 
-| ชุดที่ | สถานะ |
-|---|---|
-| [mock-test-1](mock-test-1/main.pdf) | พร้อมใช้งาน — 60 ข้อ |
-| [mock-test-2](mock-test-2/main.pdf) | พร้อมใช้งาน — 60 ข้อ |
+| ชุดที่ | ข้อสอบ | กระดาษคำตอบ |
+|---|---|---|
+| mock-test-1 | [main.pdf](mock-test-1/main.pdf) | [answer-sheet.pdf](mock-test-1/answer-sheet.pdf) |
+| mock-test-2 | [main.pdf](mock-test-2/main.pdf) | [answer-sheet.pdf](mock-test-2/answer-sheet.pdf) |
 
 ## สำหรับผู้สอน/ผู้พัฒนา
 

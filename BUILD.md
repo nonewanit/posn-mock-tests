@@ -140,6 +140,40 @@ latexmk -C && latexmk
 
 เกิดจากการใช้ `\newline` ในตำแหน่งที่ไม่มีบรรทัด (เช่น หลัง `\end{itemize}` โดยไม่มีข้อความ) แก้โดยเปลี่ยน `\newline` เป็น `\par\medskip` หรือลบออก
 
+## กระดาษคำตอบ
+
+แต่ละชุดข้อสอบมีกระดาษคำตอบ (answer sheet) แยกไว้สำหรับนักเรียนระบายคำตอบ
+
+### การสร้างกระดาษคำตอบ
+
+```bash
+python3 generate_answer_sheet.py --test-dir mock-test-1
+cd mock-test-1
+latexmk answer-sheet.tex
+# → answer-sheet.pdf
+```
+
+### การปรับแต่ง
+
+```bash
+# เปลี่ยนจำนวนข้อปรนัย/อัตนัย
+python3 generate_answer_sheet.py --test-dir mock-test-1 \
+    --mc-total 60 --mc-part1-end 30 \
+    --fillin-start 61 --fillin-count 8 --fillin-digits 4
+
+# เปลี่ยนจำนวนคอลัมน์ (default 5)
+python3 generate_answer_sheet.py --test-dir mock-test-1 --mc-cols 6
+```
+
+| ตัวเลือก | ค่าเริ่มต้น | คำอธิบาย |
+|---|---|---|
+| `--mc-total` | 55 | จำนวนข้อปรนัยทั้งหมด |
+| `--mc-part1-end` | 30 | ข้อสุดท้ายของตอนที่ 1 (คณิตศาสตร์) |
+| `--mc-cols` | 5 | จำนวนคอลัมน์ในส่วนปรนัย |
+| `--fillin-start` | 56 | เลขข้อแรกของอัตนัย |
+| `--fillin-count` | 5 | จำนวนข้ออัตนัย |
+| `--fillin-digits` | 4 | จำนวนหลักต่อข้ออัตนัย |
+
 ## หมายเหตุสำหรับผู้พัฒนา
 
 - `main.tex` ถูกสร้างโดย `generate_main.py` — **ห้ามแก้ไขด้วยมือ** (จะถูกเขียนทับเมื่อรันสคริปต์ครั้งต่อไป)
