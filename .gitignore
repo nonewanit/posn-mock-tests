@@ -7,6 +7,5 @@
 *.fdb_latexmk
 *.fls
 __MACOSX
-key.txt
 
 .claude
