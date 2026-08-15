@@ -102,6 +102,9 @@ def generate_main_tex(problems, output_file, seed):
     lines.append("% !TEX program = xelatex")
     lines.append("\\documentclass[16pt,a4paper]{article} % ใช้ขนาดฟอนต์ 16pt ตามมาตรฐานข้อสอบไทย")
     lines.append("\\input{../preamble.tex}")
+    # Optional per-test footer override (footer.tex can redefine \fancyfoot for this test only)
+    if (output_file.parent / "footer.tex").exists():
+        lines.append("\\input{footer.tex}")
     lines.append("\\usepackage{enumitem}")
     lines.append("\\setlist[enumerate]{label*=\\arabic*.}")
     lines.append("")
