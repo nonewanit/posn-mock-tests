@@ -1,6 +1,21 @@
 % topic: programming
 % author: Tun
-\question 
+\question พิจารณาโปรแกรมภาษาไพธอนต่อไปนี้ เมื่อโปรแกรมทำงานเสร็จสิ้น ค่าของตัวแปร \texttt{count} ที่ถูกแสดงผลคือข้อใด
 \newline
-\choiceshorizontal{}{}{}{}
-% answer: 
+\begin{Verbatim}[frame=single]
+n = 18
+count = 0
+
+while n > 1:
+    if n % 2 == 0:
+        n = n // 2
+    elif n % 3 == 0:
+        n = n + 1
+    else:
+        n = n - 1
+    count = count + 1
+
+print(count)
+\end{Verbatim}
+\choiceshorizontal{4}{5}{6}{7}
+% answer: 3

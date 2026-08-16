@@ -1,6 +1,25 @@
 % topic: programming
 % author: Tun
-\question 
+\question พิจารณาโปรแกรมภาษาไพธอนต่อไปนี้ เมื่อโปรแกรมทำงานเสร็จสิ้นจะแสดงผลลัพธ์เป็นเท่าใด
 \newline
-\choiceshorizontal{}{}{}{}
-% answer: 
+\begin{Verbatim}[frame=single]
+x = 15
+ans = 0
+i = 1
+
+while i <= 3:
+    j = 3
+    while j > 0:
+        if (i * j) % 2 == 0:
+            x = x - j
+            ans = ans + x
+        else:
+            x = x + i
+            ans = ans + (x % 5)
+        j = j - 1
+    i = i + 1
+
+print(ans)
+\end{Verbatim}
+\choiceshorizontal{52}{57}{59}{61}
+% answer: 4
