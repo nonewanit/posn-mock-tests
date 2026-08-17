@@ -1,6 +1,27 @@
 % topic: programming
 % author: Pan
-\question 
-\newline
-\choiceshorizontal{}{}{}{}
+\question จากโค้ดนี้ input ข้อใดจะทำให้ไม่เกิด error
+\begin{verbatim}
+def decode(s):
+    n = len(s)
+    i = 0
+    result = ""
+    while i < n:
+        char_to_repeat = s[i]
+        i += 1
+        
+        count_str = ""
+        while i < n and s[i].isdigit():
+            count_str += s[i]
+            i += 1
+        
+        count = int(count_str)
+        result += char_to_repeat * count
+        
+    return result
+
+s = input()
+print(decode(s))
+\end{verbatim}
+\choiceshorizontal{F3E4y-10}{L1Ov11e1r}{T1O1I}{P1E2T3E4R5}
 % answer: 

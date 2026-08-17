@@ -1,6 +1,36 @@
 % topic: algorithms
 % author: Pan
-\question 
-\newline
-\choiceshorizontal{}{}{}{}
+\question ถ้าใส่ n,m เป็น 5,10 และ x1=2, y1=1, x2=5, y2=9 จะแสดงผลอะไรออกมา
+\begin{pseudocode}
+    \begin{enumerate}
+        \item กำหนด n, m
+        \item สร้างตาราง arr และ dp ขนาด (n+1) x (m+1) มีค่าเป็น 0
+        \item สำหรับ i จาก 1 ถึง n
+        \begin{enumerate}
+            \item สำหรับ j จาก 1 ถึง m
+            \begin{enumerate}
+                \item ถ้า (i + j) หารด้วย 3 ลงตัว
+                \begin{enumerate}
+                    \item arr[i][j] = i + j
+                \end{enumerate}
+                \item มิฉะนั้น
+                \begin{enumerate}
+                    \item arr[i][j] = i % j
+                \end{enumerate}
+            \end{enumerate}
+        \end{enumerate}
+        \item สำหรับ i จาก 1 ถึง n
+        \begin{enumerate}
+            \item สำหรับ j จาก 1 ถึง m
+            \begin{enumerate}
+                \item dp[i][j] = dp[i-1][j] + dp[i][j-1] - dp[i-1][j-1] + arr[i][j]
+            \end{enumerate}
+        \end{enumerate}
+    \item อ่านค่า x1, y1, x2, y2
+    \item ผลรวม = dp[x2][y2] - dp[x2][y1-1] - dp[x1-1][y2] + dp[x1-1][y1-1]
+    \item พิมพ์ ผลรวม
+    \end{enumerate}
+\end{pseudocode}
+\choiceshorizontal{54}{67}{153}{210}
 % answer: 
+
