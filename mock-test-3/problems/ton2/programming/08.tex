@@ -2,16 +2,16 @@
 % author: Pan
 \question ถ้ารับข้อมูลเข้าเป็น $n=8, m=4$ จะได้ข้อมูลส่งออกเป็นอย่างไร
 \begin{verbatim}
-if(n%m):
-    print('A');
-elif(n+m>10):
-    print('B');
-elif(m*n >= n**5 and n//10 <= 0):
-    print('C');
-elif(n>m):
-    print('D');
+if n % m != 0:
+    print('A')
+elif n + m > 10:
+    print('B')
+elif m * n >= n ** 5 and n // 10 <= 0:
+    print('C')
+elif n > m:
+    print('D')
 else:
-    print('E');
+    print('E')
 \end{verbatim}
 \choiceshorizontal{A}{B}{C}{D}
 % answer: 2

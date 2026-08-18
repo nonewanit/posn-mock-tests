@@ -20,7 +20,7 @@ The `generate_main.py` script scans `problems/ton1/`, `problems/ton2/`, `problem
 
 The shared `preamble.tex` is referenced via `\input{../preamble.tex}` from each mock test's `main.tex`.
 
-XeLaTeX is required (not pdfLaTeX) because `fontspec` is used for Thai font support. The document uses **TH Sarabun New** font, which must be installed on the system. On Overleaf, the font file needs to be uploaded into the project.
+XeLaTeX is required (not pdfLaTeX) because `fontspec` is used for Thai font support. The document uses **TH Sarabun New** font, which must be installed on the system. On Overleaf, the font file needs to be uploaded into the project. Code blocks use **Courier New** from `fonts/CourierNew/cour.ttf` (loaded via `\setmonofont` with a relative path in `preamble.tex`) — keep the `fonts/` directory intact when uploading to Overleaf.
 
 Build outputs: `.aux`, `.log`, `.pdf`, `.xdv` — these are generated files, never commit them.
 
