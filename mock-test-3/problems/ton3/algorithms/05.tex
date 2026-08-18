@@ -1,7 +1,19 @@
 % topic: algorithms
 % author: Pan
-\question 
-
+\question จากโค้ดนี้ข้อมูลส่งออกจะเป็นข้อใด (กำหนดให้ x.isalpha() เป็นฟังก์ชันที่จะส่งค่าเป็น 1 ถ้า x เป็นตัวอักษรภาษาอังกฤษ และเป็น 0 ถ้า x ไม่ใช่ตัวอักษรภาษาอังกฤษ)
+\begin{verbatim}
+s = "bRe7T6lS"
+n = len(s)
+x = 0
+res = 0
+while(x<n):
+    if s[x].isalpha() and x%2:
+        res = res + 1
+    elif x%2==0:
+        res = res - 1
+    x = x + 1
+print(res)
+\end{verbatim}
 \par\medskip
 ตอบ ในกระดาษคำตอบ
-% answer: 
+% answer: -2

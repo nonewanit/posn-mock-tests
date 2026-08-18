@@ -1,6 +1,25 @@
 % topic: algorithms
 % author: Pan
-\question 
-\newline
-\choiceshorizontal{}{}{}{}
-% answer: 
+\question จงหาข้อมูลส่งออกจาก pseudo code นี้
+\begin{pseudocode}
+    \begin{enumerate}
+        \item กำหนด numbers = [4,9,12,3,0,6,9,101,67]
+        \item กำหนด i = 0, res = 0
+        \item while (i<5):
+        \begin{enumerate}
+            \item ถ้า numbers[i] มากกว่า res และ numbers[i] หาร 2 ไม่ลงตัว:
+            \begin{enumerate}
+                \item res = numbers[i]
+            \end{enumerate}
+            \item ถ้า res มากกว่าหรือเท่ากับ 50
+            \begin{enumerate}
+                \item res-=5
+            \end{enumerate}
+            \item i+=1;
+        \end{enumerate}
+        \item ส่งออกค่า res
+    \end{enumerate}
+\end{pseudocode}
+\choiceshorizontal{4}{9}{62}{96}
+% answer: 4
+
