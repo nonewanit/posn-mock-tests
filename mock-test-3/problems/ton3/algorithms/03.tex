@@ -1,7 +1,38 @@
 % topic: algorithms
 % author: Tun
 \question 
+พิจารณาการทำงานของเครื่องสถานะจำกัด (Finite State Machine) ซึ่งประกอบด้วย 4 สถานะ ได้แก่ $S_0, S_1, S_2, S_3$ โดยมีสถานะเริ่มต้นอยู่ที่ $S_0$ เสมอ เมื่อเครื่องรับข้อมูลนำเข้าเป็นอักขระ \texttt{A} หรือ \texttt{B} ทีละตัว จะเปลี่ยนสถานะไปตามตารางการเปลี่ยนสถานะดังต่อไปนี้:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{สถานะปัจจุบัน} & \textbf{เมื่อได้รับอักขระ \texttt{A}} & \textbf{เมื่อได้รับอักขระ \texttt{B}} \\ \hline
+$S_0$ & $S_1$ & $S_3$ \\ \hline
+$S_1$ & $S_2$ & $S_0$ \\ \hline
+$S_2$ & $S_3$ & $S_1$ \\ \hline
+$S_3$ & $S_0$ & $S_2$ \\ \hline
+\end{tabular}
+\end{center}
+
+เมื่อประมวลผลอักขระนำเข้าในชุดข้อมูลจบแล้ว ตัวเลขดรรชนีของสถานะสุดท้าย (เลข $k$ จากสถานะ $S_k$) จะเป็นผลลัพธ์ของการประมวลผลชุดนั้น
+
+\medskip
+\textbf{ตัวอย่างที่ 1} สมมติข้อมูลนำเข้าคือ \texttt{A A} ผลลัพธ์เป็นดังนี้:\\
+\texttt{A A} $\rightarrow$ \texttt{2} \quad (\textit{คำอธิบาย: เริ่มจาก $S_0 \xrightarrow{\text{รับ } A} S_1 \xrightarrow{\text{รับ } A} S_2$ จบที่สถานะ $S_2$ ผลลัพธ์จึงเป็น 2})
+
+\medskip
+\textbf{ตัวอย่างที่ 2} สมมติข้อมูลนำเข้าคือ \texttt{A B A} ผลลัพธ์เป็นดังนี้:\\
+\texttt{A B A} $\rightarrow$ \texttt{1} \quad (\textit{คำอธิบาย: เริ่มจาก $S_0 \xrightarrow{\text{รับ } A} S_1 \xrightarrow{\text{รับ } B} S_0 \xrightarrow{\text{รับ } A} S_1$ จบที่สถานะ $S_1$ ผลลัพธ์จึงเป็น 1})
+
+\medskip
+จงหาผลลัพธ์การประมวลผลของชุดข้อมูลนำเข้าตามลำดับทั้ง 4 ข้อต่อไปนี้:
+\begin{enumerate}
+    \item \texttt{A A B} $\rightarrow$ \textbf{?}
+    \item \texttt{A A A} $\rightarrow$ \textbf{?}
+    \item \texttt{B B B B} $\rightarrow$ \textbf{?}
+    \item \texttt{A B B} $\rightarrow$ \textbf{?}
+\end{enumerate}
 
 \par\medskip
-ตอบ ในกระดาษคำตอบ
-% answer: 
+ตอบ ในกระดาษคำตอบ 
+% answer: 1 3 0 3 
