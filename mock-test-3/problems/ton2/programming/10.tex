@@ -1,6 +1,25 @@
 % topic: programming
 % author: Frey
-\question 
-\newline
-\choiceshorizontal{}{}{}{}
-% answer: 
+\question \begin{tabular}[t]{@{}l@{}}ข้อใดคือผลลัพธ์ของโปรแกรมต่อไปนี้
+\\
+\end{tabular}
+\begin{verbatim}
+arr   = [2,3,4,103,2]
+cost  = [1,3,2,4,5]
+i = 0
+ans = 0
+while i < 5:
+    val = arr[i];
+    cnt = 0
+    j = 0
+    while j<5 or val >= 0:
+        val = val - cost[j]
+        j = j + 1;
+    ans = ans + j
+    i = i + 1
+print(ans)
+\end{verbatim}
+\begin{tabular}[t]{@{}l@{}}
+\choiceshorizontal{14}{15}{25}{มีข้อผิดพลาด}
+\end{tabular}
+% answer: 4
