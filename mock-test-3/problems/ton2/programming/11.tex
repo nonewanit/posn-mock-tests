@@ -1,6 +1,15 @@
 % topic: programming
 % author: Win
-\question 
-\newline
-\choiceshorizontal{}{}{}{}
-% answer: 
+\question ผลลัพธ์ของโปรแกรมนี้ตรงกับข้อใด
+\begin{verbatim}
+s = 0
+n = 100
+while n > 0:
+    n = n - 1
+    if n % 2 == 0:
+        continue
+    s = s + n
+print(s % 10)
+\end{verbatim}
+\choiceshorizontal{0}{5}{9}{10}
+% answer: 1
