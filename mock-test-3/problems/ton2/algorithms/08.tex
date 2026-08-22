@@ -1,0 +1,25 @@
+% topic: algorithms
+% author: Pan
+\question จงหาข้อมูลส่งออกจาก pseudo code นี้
+\begin{pseudocode}
+    \begin{enumerate}
+        \item กำหนด numbers เป็นรายการข้อมูล [4,9,12,3,0,6,9,101,67]
+        \item กำหนด i มีค่าเท่ากับ 0 และ res มีค่าเท่ากับ 0
+        \item ทำซ้ำในขณะที่ i มีค่าน้อยกว่า 5:
+        \begin{enumerate}
+            \item ถ้า numbers[i] มากกว่า res และ numbers[i] หารด้วย 2 ไม่ลงตัว:
+            \begin{enumerate}
+                \item ให้ res มีค่าเท่ากับ numbers[i]
+            \end{enumerate}
+            \item ถ้า res มากกว่าหรือเท่ากับ 50
+            \begin{enumerate}
+                \item ให้ res มีค่าเท่ากับ res - 5
+            \end{enumerate}
+            \item ให้ i มีค่าเท่ากับ i + 1
+        \end{enumerate}
+        \item ส่งออกค่า res
+    \end{enumerate}
+\end{pseudocode}
+\choiceshorizontal{4}{9}{62}{96}
+% answer: 2
+

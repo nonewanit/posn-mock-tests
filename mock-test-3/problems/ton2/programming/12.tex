@@ -1,0 +1,18 @@
+% topic: programming
+% author: Kang
+\question โปรแกรมต่อไปนี้ แสดงผลลัพธ์ตรงกับข้อใด
+
+เมื่อ \% ให้ผลลัพธ์เป็นเศษเหลือของการหาร เช่น 7\%3 ได้ผลลัพธ์เป็น 1
+\begin{verbatim}
+a = 5
+b = 24
+if b % a > 2:
+    a = a + b % a
+    if a % 2 == 0:
+        b = b - a
+    else:
+        b = b % a
+print(a + b)
+\end{verbatim}
+\choiceshorizontal{15}{24}{29}{33}
+% answer: 1

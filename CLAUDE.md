@@ -16,11 +16,11 @@ xelatex -no-pdf -interaction=nonstopmode main.tex
 xdvipdfmx main.xdv
 ```
 
-The `generate_main.py` script scans `problems/ton1/`, `problems/ton2/`, `problems/ton3/` recursively for `.tex` files and writes the `main.tex` skeleton with section headers, auto-computed question counts, and shuffled question order (deterministic per seed). Any `.tex` file dropped into the right category folder is automatically included — no manual `\input` editing needed.
+The `generate_main.py` script scans `problems/ton1/`, `problems/ton2/`, `problems/ton3/` recursively for `.tex` files and writes the `main.tex` skeleton with section headers, auto-computed question counts, and shuffled question order (deterministic per seed). Any `.tex` file dropped into the right category folder is automatically included — no manual `\input` editing needed. An optional `footer.tex` in a mock test's root (e.g. `mock-test-3/footer.tex`) is also auto-included right after the preamble — use it for per-test footer overrides like a different `\fancyfoot[L]`.
 
 The shared `preamble.tex` is referenced via `\input{../preamble.tex}` from each mock test's `main.tex`.
 
-XeLaTeX is required (not pdfLaTeX) because `fontspec` is used for Thai font support. The document uses **TH Sarabun New** font, which must be installed on the system. On Overleaf, the font file needs to be uploaded into the project.
+XeLaTeX is required (not pdfLaTeX) because `fontspec` is used for Thai font support. The document uses **TH Sarabun New** font, which must be installed on the system. On Overleaf, the font file needs to be uploaded into the project. Code blocks use **Courier New** from `fonts/CourierNew/cour.ttf` (loaded via `\setmonofont` with a relative path in `preamble.tex`) — keep the `fonts/` directory intact when uploading to Overleaf.
 
 Build outputs: `.aux`, `.log`, `.pdf`, `.xdv` — these are generated files, never commit them.
 

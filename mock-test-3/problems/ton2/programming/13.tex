@@ -1,0 +1,23 @@
+% topic: programming
+% author: Yuan
+\question ข้อใดคือรายการข้อมูลของ data หลังจากโปรแกรมทำงานเสร็จ 
+\begin{verbatim}
+data = ['A', 'B', 'C', 'D', 'E', 'F']
+n = len(data)
+k = 2
+i = 0
+while i < k:
+    j = n - 1
+    while j > i:
+        temp = data[j]
+        data[j] = data[j-1]
+        data[j-1] = temp
+        j = j - 1
+    i = i + 1
+print(data)
+\end{verbatim}
+\choicesgrid{[`E', `F', `A', `B', `C', `D']}
+             {[`F', `E', `A', `B', `C', `D']}
+             {[`C', `D', `E', `F', `A', `B']}
+             {[`C', `D', `E', `F', `B', `A']}
+% answer: 2

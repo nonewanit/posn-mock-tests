@@ -1,0 +1,21 @@
+% topic: algorithms
+% author: Pan
+\question จากโค้ดนี้ข้อมูลส่งออกจะเป็นข้อใด \\ 
+\textbf{หมายเหตุ} x.isalpha() เป็นฟังก์ชันที่จะคืนค่าเป็น 1 ถ้า x เป็นตัวอักษรภาษาอังกฤษ มิฉะนั้นจะคืนค่าเป็น 0
+\begin{verbatim}
+s = "bRe7T6lS"
+n = len(s)
+x = 0
+res = 0
+while x < n:
+    if s[x].isalpha() == 1 and x % 2 != 0:
+        res = res + 1
+    elif x % 2 == 0:
+        res = res - 1
+    x = x + 1
+print(res)
+\end{verbatim}
+ถ้าคำตอบเป็นค่าติดลบให้นำคำตอบบวกด้วย 10000
+\par\medskip
+ตอบ ในกระดาษคำตอบ
+% answer: 9998

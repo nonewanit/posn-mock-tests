@@ -1,0 +1,30 @@
+% topic: algorithms
+% author: Frey
+\question ข้อใดคือรายการข้อมูลของ table หลังจากขั้นตอนวิธีต่อไปนี้ทำงานเสร็จ
+\begin{pseudocode}
+\begin{enumerate}
+    \item กำหนดให้ table เป็นรายการข้อมูล [-1, -1, -1, -1, -1, -1, -1]
+    \item กำหนดให้ data เป็นรายการข้อมูล [10, 5, 3, 26, 11]
+    \item ให้ i มีค่าเท่ากับ 0
+    \item ทำซ้ำในขณะที่ i มีค่าน้อยกว่า 5
+        \begin{enumerate}
+            \item ให้ pos มีค่าเท่ากับ เศษเหลือจากการหาร data[i] ด้วย 7
+            \item ทำซ้ำในขณะที่ table[pos] ไม่เท่ากับ -1
+                \begin{enumerate}
+                    \item ให้ pos มีค่าเท่ากับ pos + 1
+                    \item ให้ pos มีค่าเท่ากับ เศษเหลือจากการหาร pos ด้วย 7
+                \end{enumerate}
+            \item ให้ table[pos] มีค่าเท่ากับ data[i]
+            \item ให้ i มีค่าเท่ากับ i + 1
+        \end{enumerate}
+\end{enumerate}
+\end{pseudocode}
+\hspace*{-1em}%
+\begin{tabular}[t]{@{}l@{}}
+\choicesgrid
+{[11, -1, -1, 10, 3, 5, 26]}
+{[26, 11, -1, 10, 3, 5, -1]}
+{[11, 26, -1, 10, 3, 5, -1]}
+{[11, 11, 26, 10, 3, 5, 26]} 
+\end{tabular}
+% answer: 1

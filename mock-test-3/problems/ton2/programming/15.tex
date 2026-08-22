@@ -1,0 +1,36 @@
+% topic: programming
+% author: Pan
+\question จากโค้ดนี้ ถ้าใช้ s ข้อใดจะทำให้ไม่มีข้อความนำออกเป็น ``Error" ถ้าโปรแกรมทำงานผิดพลาดไม่ว่ากรณีใด ให้ถือว่าเกิดข้อความนำออกเป็น ``Error"
+
+\textbf{หมายเหตุ} x.isdigit() จะส่งค่ากลับเป็น 1 ถ้า x เป็นตัวอักษรที่เป็นตัวเลข (`0'-`9') มิฉะนั้นจะส่งค่ากลับเป็น 0 
+
+int(x) จะแปลงตัวอักษร x ในวงเล็บเป็นตัวแปรประเภทจำนวนเต็ม
+\begin{verbatim}
+s = ???
+n = len(s)
+i = 0
+result = ""
+error = False
+
+while i < n:
+    char_to_repeat = s[i]
+    count_str = 0
+    i = i + 1
+    if s[i].isdigit() == 0:
+        error = True
+        break
+    while i < n and s[i].isdigit() == 1:
+        count_str = count_str * 10 + int(s[i])
+        i = i + 1
+    x = 0
+    while x < count_str:
+        result = result + char_to_repeat
+        x = x + 1
+
+if error:
+    print("Error")
+else:
+    print(result)
+\end{verbatim}
+\choiceshorizontal{F3E4y-10}{L1Ov11e1r}{T1O1I}{P1E2T3E4R5}
+% answer: 4
