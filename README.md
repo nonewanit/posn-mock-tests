@@ -39,7 +39,14 @@
 
 ## Credits
 
-- ผู้เขียน: [None Wanitchollakit (Yuan)](https://github.com/nonewanit)
+- ผู้เขียน: 
+    - [None Wanitchollakit (Yuan)](https://github.com/nonewanit)
+    - [Chayanin Kongsareekul (Kang)](https://github.com/Aphrodicez)
+    - [Tanapan Macmyaraxa (Pan)](https://github.com/atsuiiw)
+    - [Thitiwut Sreewasut (Frey)](https://github.com/MiyaZaki1072)
+    - [Rungsikorn Changkeb (Tun)](https://github.com/runsikrn)
+    - [Kawee Kasetpibaln (Win)]()
+- ขอขอบคุณ [Sean Wanitchollakit (Yoo)](https://github.com/NortGlG) สำหรับความอนุเคราะห์ในการตรวจทานความถูกต้องของข้อสอบ
 - หากพบข้อผิดพลาด แจ้งได้ที่ [GitHub Issues](../../issues)
 - เนื้อหาอ้างอิงตาม เนื้อหาข้อสอบคัดเลือกเข้าค่าย 1 สอวน. วิชาคอมพิวเตอร์ ปีการศึกษา 2569
 - เนื้อหาบางส่วนสร้างด้วยความช่วยเหลือของ AI และผ่านการตรวจสอบโดยผู้เขียน
